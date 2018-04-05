@@ -1,0 +1,37 @@
+Use case overview:
+1
+	identifiera alla aktörer som interagerar med systemet (check)
+	identifiera alla use cases för systemet (check)
+	identifiera vilka aktörer som är involverade inom alla use cases (check)
+	identifiera relationen, omm någon finns, mellan use cases (behövs ses över och förtydligas)
+2
+	beskriv aktörerna i en "ordbok" (check~ish)
+3
+	Beskriv use cases i en högnivås beskrivning som innehåller namn, primär aktör(er), en liten beskrivning (check)
+
+Implementation plan
+1
+	ordna UML use cases efter deras vikt i systemet
+2
+	motivera ordningen i ett perspektiv av hur detta låter dig bygga en mvp (minimal viable product)
+3
+	ge ut story points till varje use case
+	(en story point är ett värde som beskriver hur mycket arbete som behöver läggas ned, obs! inte ett värde på tid)
+4
+	Bestäm och motivera hur många story points som vi har tid för i denna kurs (på första iterationen) set ett maximum, minimum och en average för varje iteration
+	(vi behöver egentligen endast en iteration...)
+5
+	Lägg ut dina use cases till iterationer sådana att:
+	
+	1
+		skapa en mvp i första iterationen
+	2
+		Ha en rimlig mängd av story points allokerade på varje iteration i relation till max, min o average som är definerade sen tidigare.
+
+Detailed use cases for first iteration
+1
+	Utöka use case förklaringarna i första iterationen sådana att implementationsplanen innehåller följande attributer:
+	* preconditions
+	* Main Course of Events (or Main Success Scenario)
+	* Alternative Flow of Events (or Extensions)
+	* Special Requirements (For example Performance, Reliability, Modifiability, etc.)
