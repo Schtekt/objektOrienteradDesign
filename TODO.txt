@@ -3,7 +3,7 @@ Use case overview:
 	identifiera alla aktörer som interagerar med systemet (check)
 	identifiera alla use cases för systemet (check)
 	identifiera vilka aktörer som är involverade inom alla use cases (check)
-	identifiera relationen, omm någon finns, mellan use cases (behövs ses över och förtydligas)
+	identifiera relationen, om någon finns, mellan use cases (check)
 2
 	beskriv aktörerna i en "ordbok" (check~ish)
 3
