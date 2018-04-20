@@ -4,7 +4,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>368</x>
+      <x>176</x>
       <y>472</y>
       <w>168</w>
       <h>72</h>
@@ -20,21 +20,22 @@ string virtual displayOptions()=0</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>440</x>
+      <x>248</x>
       <y>592</y>
       <w>112</w>
-      <h>40</h>
+      <h>48</h>
     </coordinates>
     <panel_attributes>UserHandler
 --
-std::vector&lt;user&gt;</panel_attributes>
+std::vector&lt;user&gt;
+int SelectedUser</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>456</x>
-      <y>680</y>
+      <x>264</x>
+      <y>696</y>
       <w>80</w>
       <h>48</h>
     </coordinates>
@@ -46,8 +47,8 @@ string name</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>512</x>
-      <y>752</y>
+      <x>320</x>
+      <y>768</y>
       <w>112</w>
       <h>40</h>
     </coordinates>
@@ -59,8 +60,8 @@ int nrOfMovedGoods</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>392</x>
-      <y>752</y>
+      <x>200</x>
+      <y>768</y>
       <w>112</w>
       <h>40</h>
     </coordinates>
@@ -73,7 +74,7 @@ int nrOfAddedGoods
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>592</x>
+      <x>400</x>
       <y>488</y>
       <w>192</w>
       <h>112</h>
@@ -84,15 +85,14 @@ std::vector&lt;Warehouse&gt; Warehouses
 int selectedWarehouse
 
 Warehouse getWarehouse(int id)
-Warehouse addWarehouse()
-Warehouse setGoodSpace(int size)
-Warehouse deleteWarehouse(???)</panel_attributes>
+void addWarehouse()
+bool deleteWarehouse()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>704</x>
+      <x>512</x>
       <y>328</y>
       <w>192</w>
       <h>136</h>
@@ -101,16 +101,18 @@ Warehouse deleteWarehouse(???)</panel_attributes>
 --
 TruckHandler th
 GoodSpaceHandler gsh
+string name
 
 GoodSpace getGoodSpace(int[2] id)
 Truck getTruck(int id)
-string TrackTrucks()</panel_attributes>
+string TrackTrucks()
+string getName()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>728</x>
+      <x>536</x>
       <y>656</y>
       <w>200</w>
       <h>96</h>
@@ -124,7 +126,7 @@ int[2] selectedGoodSpace</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>672</x>
+      <x>480</x>
       <y>864</y>
       <w>208</w>
       <h>88</h>
@@ -134,22 +136,21 @@ int[2] selectedGoodSpace</panel_attributes>
 std::vector&lt;Good&gt;
 float tempC
 
-Good addGood(int id, string description)
-Good editGood(bool locked)
-Good deleteGood(int id)</panel_attributes>
+void addGood(string description)
+bool editGood(bool locked)
+bool deleteGood()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>960</x>
+      <x>768</x>
       <y>840</y>
       <w>96</w>
       <h>64</h>
     </coordinates>
     <panel_attributes>Good
 --
-int id
 bool locked
 string description</panel_attributes>
     <additional_attributes/>
@@ -157,7 +158,7 @@ string description</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1072</x>
+      <x>880</x>
       <y>656</y>
       <w>80</w>
       <h>80</h>
@@ -172,7 +173,7 @@ bool hard</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1024</x>
+      <x>832</x>
       <y>1048</y>
       <w>80</w>
       <h>56</h>
@@ -184,7 +185,7 @@ bool hard</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>936</x>
+      <x>744</x>
       <y>936</y>
       <w>136</w>
       <h>56</h>
@@ -197,7 +198,7 @@ std::vector&lt;small-items&gt;</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>944</x>
+      <x>752</x>
       <y>328</y>
       <w>136</w>
       <h>144</h>
@@ -207,15 +208,15 @@ std::vector&lt;small-items&gt;</panel_attributes>
 std::vector&lt;Truck&gt; Trucks
 int selectedTruck
 
-Truck addTruck(int[2] pos)
-Truck editTruck(int[2] pos, bool carries, good g)
-Truck deleteTruck(int id?)</panel_attributes>
+bool addTruck(int[2] pos)
+bool editTruck(int[2] pos, bool carries, good g)
+bool deleteTruck()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>976</x>
+      <x>784</x>
       <y>592</y>
       <w>80</w>
       <h>72</h>
@@ -230,7 +231,7 @@ Good g</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1008</x>
+      <x>816</x>
       <y>984</y>
       <w>48</w>
       <h>80</h>
@@ -243,7 +244,7 @@ m2=1..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1000</x>
+      <x>808</x>
       <y>896</y>
       <w>24</w>
       <h>56</h>
@@ -254,18 +255,18 @@ m2=1..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1048</x>
+      <x>848</x>
       <y>704</y>
-      <w>40</w>
-      <h>160</h>
+      <w>48</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;180.0;30.0;10.0</additional_attributes>
+    <additional_attributes>10.0;170.0;10.0;10.0;40.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>984</x>
+      <x>792</x>
       <y>464</y>
       <w>40</w>
       <h>144</h>
@@ -278,7 +279,7 @@ m2=1..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>888</x>
+      <x>696</x>
       <y>448</y>
       <w>72</w>
       <h>32</h>
@@ -291,7 +292,7 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>656</x>
+      <x>464</x>
       <y>448</y>
       <w>64</w>
       <h>56</h>
@@ -304,20 +305,20 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>824</x>
+      <x>632</x>
       <y>456</y>
-      <w>32</w>
+      <w>24</w>
       <h>216</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=1</panel_attributes>
-    <additional_attributes>20.0;250.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;250.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>528</x>
+      <x>336</x>
       <y>504</y>
       <w>80</w>
       <h>32</h>
@@ -330,7 +331,7 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>488</x>
+      <x>296</x>
       <y>536</y>
       <w>24</w>
       <h>72</h>
@@ -343,21 +344,21 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>488</x>
-      <y>624</y>
+      <x>296</x>
+      <y>632</y>
       <w>24</w>
-      <h>72</h>
+      <h>80</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=1</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>520</x>
-      <y>720</y>
+      <x>328</x>
+      <y>736</y>
       <w>24</w>
       <h>48</h>
     </coordinates>
@@ -367,8 +368,8 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>464</x>
-      <y>720</y>
+      <x>272</x>
+      <y>736</y>
       <w>24</w>
       <h>48</h>
     </coordinates>
@@ -378,7 +379,7 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>808</x>
+      <x>616</x>
       <y>744</y>
       <w>48</w>
       <h>136</h>
@@ -391,7 +392,7 @@ m2=1..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>872</x>
+      <x>680</x>
       <y>856</y>
       <w>104</w>
       <h>32</h>
@@ -404,7 +405,7 @@ m2=1..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1000</x>
+      <x>808</x>
       <y>656</y>
       <w>40</w>
       <h>200</h>
@@ -417,20 +418,20 @@ m2=0</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>920</x>
+      <x>712</x>
       <y>464</y>
-      <w>48</w>
-      <h>240</h>
+      <w>64</w>
+      <h>208</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=1</panel_attributes>
-    <additional_attributes>40.0;10.0;10.0;280.0</additional_attributes>
+    <additional_attributes>60.0;10.0;60.0;110.0;10.0;110.0;10.0;240.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>192</x>
+      <x>0</x>
       <y>472</y>
       <w>112</w>
       <h>88</h>
@@ -444,7 +445,7 @@ int selectedInterface</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>296</x>
+      <x>104</x>
       <y>512</y>
       <w>88</w>
       <h>32</h>
@@ -457,7 +458,7 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>360</x>
+      <x>168</x>
       <y>416</y>
       <w>72</w>
       <h>72</h>
@@ -468,7 +469,7 @@ m2=1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>192</x>
+      <x>0</x>
       <y>336</y>
       <w>176</w>
       <h>112</h>
@@ -484,7 +485,7 @@ void trackTrucks()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>192</x>
+      <x>0</x>
       <y>216</y>
       <w>176</w>
       <h>112</h>
@@ -498,7 +499,7 @@ bool moveGood()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>360</x>
+      <x>168</x>
       <y>296</y>
       <w>88</w>
       <h>192</h>
@@ -509,7 +510,7 @@ bool moveGood()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>192</x>
+      <x>0</x>
       <y>96</y>
       <w>176</w>
       <h>112</h>
@@ -524,7 +525,7 @@ bool setTemperature(float tempC)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>360</x>
+      <x>168</x>
       <y>184</y>
       <w>104</w>
       <h>304</h>
@@ -535,7 +536,7 @@ bool setTemperature(float tempC)</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>192</x>
+      <x>0</x>
       <y>0</y>
       <w>176</w>
       <h>88</h>
@@ -552,7 +553,7 @@ void setDescription()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>360</x>
+      <x>168</x>
       <y>64</y>
       <w>120</w>
       <h>424</h>
@@ -563,12 +564,27 @@ void setDescription()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1048</x>
+      <x>856</x>
       <y>880</y>
       <w>72</w>
       <h>184</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;70.0;10.0;60.0;120.0;20.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>352</x>
+      <y>872</y>
+      <w>112</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>We should have a 
+stack as our
+list type of goods
+in a good space
+bg=blue</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
