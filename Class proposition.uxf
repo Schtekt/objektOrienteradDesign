@@ -4,7 +4,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>224</x>
+      <x>322</x>
       <y>504</y>
       <w>231</w>
       <h>126</h>
@@ -25,16 +25,18 @@ void virtual runOption(int option, int * interface) =0</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>266</x>
+      <x>364</x>
       <y>672</y>
       <w>133</w>
-      <h>84</h>
+      <h>112</h>
     </coordinates>
     <panel_attributes>UserHandler
 --
-std::vector&lt;user&gt;
-int SelectedUser
+private:
+std::vector&lt;user&gt; users
+int selectedUser
 
+public:
 User getSelectedUser()
 void setSelectedUser(int id)</panel_attributes>
     <additional_attributes/>
@@ -42,47 +44,28 @@ void setSelectedUser(int id)</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>301</x>
-      <y>798</y>
-      <w>70</w>
-      <h>42</h>
+      <x>399</x>
+      <y>840</y>
+      <w>98</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>User
 --
-string name</panel_attributes>
+private:
+string name
+bool manager
+
+public:
+string getName()
+bool getRole()
+void setName(string name)
+void changeRole()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>350</x>
-      <y>861</y>
-      <w>98</w>
-      <h>35</h>
-    </coordinates>
-    <panel_attributes>Trucker
---
-int nrOfMovedGoods</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>245</x>
-      <y>861</y>
-      <w>98</w>
-      <h>35</h>
-    </coordinates>
-    <panel_attributes>Manager
---
-int nrOfAddedGoods
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>504</x>
+      <x>602</x>
       <y>532</y>
       <w>168</w>
       <h>140</h>
@@ -90,7 +73,7 @@ int nrOfAddedGoods
     <panel_attributes>WarehouseHandler
 --
 private:
-std::vector&lt;Warehouse&gt; Warehouses
+std::vector&lt;Warehouse&gt; warehouses
 int selectedWarehouse
 
 public:
@@ -104,7 +87,7 @@ Warehouse getCurrentWarehouse()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>602</x>
+      <x>700</x>
       <y>371</y>
       <w>210</w>
       <h>147</h>
@@ -127,15 +110,15 @@ string getName()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>623</x>
+      <x>658</x>
       <y>679</y>
-      <w>175</w>
+      <w>238</w>
       <h>112</h>
     </coordinates>
     <panel_attributes>GoodSpaceHandler
 --
 private:
-std::vector&lt;std::vector&lt;GoodSpace&gt;&gt;
+std::vector&lt;std::vector&lt;GoodSpace&gt;&gt; goodSpaces
 int[2] selectedGoodSpace
 TruckHandler th
 
@@ -147,7 +130,7 @@ GoodSpace getCurrentGoodSpace()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>574</x>
+      <x>672</x>
       <y>861</y>
       <w>182</w>
       <h>126</h>
@@ -168,7 +151,7 @@ void removeGood()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>826</x>
+      <x>924</x>
       <y>833</y>
       <w>147</w>
       <h>126</h>
@@ -189,7 +172,7 @@ void switchLocked()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>994</x>
+      <x>1092</x>
       <y>679</y>
       <w>105</w>
       <h>126</h>
@@ -212,7 +195,7 @@ void changeHard()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>875</x>
+      <x>973</x>
       <y>1120</y>
       <w>70</w>
       <h>49</h>
@@ -224,7 +207,7 @@ void changeHard()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>805</x>
+      <x>903</x>
       <y>980</y>
       <w>119</w>
       <h>91</h>
@@ -242,7 +225,7 @@ Small-item getItem(int id)</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>875</x>
+      <x>973</x>
       <y>350</y>
       <w>217</w>
       <h>147</h>
@@ -265,7 +248,7 @@ void putDownGood()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>903</x>
+      <x>1001</x>
       <y>539</y>
       <w>119</w>
       <h>133</h>
@@ -287,7 +270,7 @@ void setGood(Good g)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>868</x>
+      <x>966</x>
       <y>1064</y>
       <w>35</w>
       <h>70</h>
@@ -300,7 +283,7 @@ m2=1..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>861</x>
+      <x>959</x>
       <y>952</y>
       <w>21</w>
       <h>42</h>
@@ -311,7 +294,7 @@ m2=1..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>896</x>
+      <x>994</x>
       <y>721</y>
       <w>112</w>
       <h>126</h>
@@ -322,7 +305,7 @@ m2=1..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>910</x>
+      <x>1008</x>
       <y>490</y>
       <w>35</w>
       <h>63</h>
@@ -335,7 +318,7 @@ m2=1..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>805</x>
+      <x>903</x>
       <y>476</y>
       <w>84</w>
       <h>28</h>
@@ -348,7 +331,7 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>560</x>
+      <x>658</x>
       <y>497</y>
       <w>56</w>
       <h>49</h>
@@ -361,7 +344,7 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>707</x>
+      <x>805</x>
       <y>511</y>
       <w>21</w>
       <h>182</h>
@@ -374,7 +357,7 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>448</x>
+      <x>546</x>
       <y>546</y>
       <w>70</w>
       <h>28</h>
@@ -387,7 +370,7 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>329</x>
+      <x>427</x>
       <y>623</y>
       <w>21</w>
       <h>63</h>
@@ -400,42 +383,20 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>329</x>
-      <y>749</y>
+      <x>427</x>
+      <y>777</y>
       <w>21</w>
-      <h>63</h>
+      <h>77</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=1</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>357</x>
-      <y>833</y>
-      <w>21</w>
-      <h>42</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>308</x>
-      <y>833</y>
-      <w>21</w>
-      <h>42</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>693</x>
+      <x>791</x>
       <y>784</y>
       <w>35</w>
       <h>91</h>
@@ -448,7 +409,7 @@ m2=1..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>749</x>
+      <x>847</x>
       <y>854</y>
       <w>91</w>
       <h>28</h>
@@ -461,7 +422,7 @@ m2=1..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>861</x>
+      <x>959</x>
       <y>665</y>
       <w>91</w>
       <h>182</h>
@@ -474,7 +435,7 @@ m2=0</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>777</x>
+      <x>875</x>
       <y>490</y>
       <w>119</w>
       <h>203</h>
@@ -487,16 +448,18 @@ m2=1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
+      <x>98</x>
       <y>518</y>
       <w>161</w>
-      <h>77</h>
+      <h>105</h>
     </coordinates>
     <panel_attributes>Menu
 --
+private:
 Interfaces[5] i
 int selectedInterface
 
+public:
 void runOption(int option)
 void displayOptions(string options)
 </panel_attributes>
@@ -505,7 +468,7 @@ void displayOptions(string options)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>154</x>
+      <x>252</x>
       <y>553</y>
       <w>84</w>
       <h>28</h>
@@ -518,7 +481,7 @@ m2=5</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>301</x>
+      <x>399</x>
       <y>469</y>
       <w>63</w>
       <h>49</h>
@@ -529,7 +492,7 @@ m2=5</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>84</x>
+      <x>182</x>
       <y>399</y>
       <w>224</w>
       <h>98</h>
@@ -547,7 +510,7 @@ void addGood()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>84</x>
+      <x>182</x>
       <y>294</y>
       <w>224</w>
       <h>98</h>
@@ -562,7 +525,7 @@ bool moveGood()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>301</x>
+      <x>399</x>
       <y>364</y>
       <w>77</w>
       <h>154</h>
@@ -573,7 +536,7 @@ bool moveGood()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>84</x>
+      <x>182</x>
       <y>189</y>
       <w>224</w>
       <h>98</h>
@@ -590,7 +553,7 @@ void remove()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>301</x>
+      <x>399</x>
       <y>266</y>
       <w>91</w>
       <h>252</h>
@@ -601,7 +564,7 @@ void remove()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>84</x>
+      <x>182</x>
       <y>105</y>
       <w>224</w>
       <h>77</h>
@@ -619,7 +582,7 @@ void setDescription()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>301</x>
+      <x>399</x>
       <y>161</y>
       <w>105</w>
       <h>357</h>
@@ -630,7 +593,7 @@ void setDescription()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>903</x>
+      <x>1001</x>
       <y>952</y>
       <w>70</w>
       <h>182</h>
@@ -641,7 +604,7 @@ void setDescription()
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>462</x>
+      <x>560</x>
       <y>868</y>
       <w>98</w>
       <h>63</h>
@@ -656,7 +619,7 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>84</x>
+      <x>182</x>
       <y>0</y>
       <w>224</w>
       <h>98</h>
@@ -672,7 +635,7 @@ void removeWarehouse()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>301</x>
+      <x>399</x>
       <y>70</y>
       <w>119</w>
       <h>448</h>
