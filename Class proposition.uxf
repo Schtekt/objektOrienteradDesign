@@ -121,14 +121,16 @@ string getName()</panel_attributes>
       <x>623</x>
       <y>679</y>
       <w>175</w>
-      <h>84</h>
+      <h>112</h>
     </coordinates>
     <panel_attributes>GoodSpaceHandler
 --
 std::vector&lt;std::vector&lt;GoodSpace&gt;&gt;
 int[2] selectedGoodSpace
+TruckHandler th
 
-bool select(int[2] pos)</panel_attributes>
+bool select(int[2] pos)
+GoodSpace getCurrentGoodSpace()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -137,30 +139,36 @@ bool select(int[2] pos)</panel_attributes>
       <x>574</x>
       <y>861</y>
       <w>182</w>
-      <h>77</h>
+      <h>105</h>
     </coordinates>
     <panel_attributes>Good space
 --
 std::vector&lt;Good&gt;
 float tempC
 
+Good getCurrentGood()
 void addGood(string description)
 bool editGood(bool locked)
-bool deleteGood()</panel_attributes>
+void removeGood()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>826</x>
-      <y>840</y>
-      <w>84</w>
-      <h>56</h>
+      <y>833</y>
+      <w>105</w>
+      <h>105</h>
     </coordinates>
     <panel_attributes>Good
 --
 bool locked
-string description</panel_attributes>
+string description
+
+string getDescription()
+bool getLocked()
+void setDescription(string desc)
+void switchLocked()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -168,25 +176,31 @@ string description</panel_attributes>
     <coordinates>
       <x>994</x>
       <y>679</y>
-      <w>70</w>
-      <h>70</h>
+      <w>105</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>Big box
 --
 float tempMax
 float tempMin
-bool hard</panel_attributes>
+bool hard
+
+float getTempMax()
+float getTempMin()
+void setTempMax()
+void setTempMin()
+void changeHard()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>882</x>
-      <y>1022</y>
+      <x>875</x>
+      <y>1092</y>
       <w>70</w>
       <h>49</h>
     </coordinates>
-    <panel_attributes>Small-items
+    <panel_attributes>Small-item
 --</panel_attributes>
     <additional_attributes/>
   </element>
@@ -194,13 +208,16 @@ bool hard</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>805</x>
-      <y>924</y>
+      <y>959</y>
       <w>119</w>
-      <h>49</h>
+      <h>70</h>
     </coordinates>
     <panel_attributes>Good collection
 --
-std::vector&lt;small-items&gt;</panel_attributes>
+std::vector&lt;small-items&gt;
+
+void addSmalItem()
+Small-item getItem(int id)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -208,57 +225,65 @@ std::vector&lt;small-items&gt;</panel_attributes>
     <coordinates>
       <x>875</x>
       <y>392</y>
-      <w>119</w>
+      <w>217</w>
       <h>126</h>
     </coordinates>
     <panel_attributes>TruckHandler
 --
 std::vector&lt;Truck&gt; Trucks
 int selectedTruck
+GoodSpaceHandler gsh
 
 bool addTruck(int[2] pos)
 bool editTruck(int[2] pos, bool carries, good g)
-bool deleteTruck()</panel_attributes>
+bool deleteTruck()
+void carryGood()
+void putDownGood()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>903</x>
-      <y>595</y>
-      <w>70</w>
-      <h>63</h>
+      <y>560</y>
+      <w>119</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>Truck
 --
 int[2] pos
 bool carries
-Good g</panel_attributes>
+Good g
+
+void getPos(int[2] * pos)
+Good getGood()
+void setPos(int[2] pos)
+void setGood(Good g)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>868</x>
-      <y>966</y>
-      <w>42</w>
-      <h>70</h>
+      <y>1022</y>
+      <w>35</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=1
 m2=1..n</panel_attributes>
-    <additional_attributes>10.0;10.0;20.0;80.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>861</x>
-      <y>889</y>
+      <y>931</y>
       <w>21</w>
-      <h>49</h>
+      <h>42</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -266,10 +291,10 @@ m2=1..n</panel_attributes>
       <x>896</x>
       <y>721</y>
       <w>112</w>
-      <h>133</h>
+      <h>126</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;170.0;10.0;10.0;140.0;10.0</additional_attributes>
+    <additional_attributes>10.0;160.0;10.0;10.0;140.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -277,25 +302,25 @@ m2=1..n</panel_attributes>
       <x>910</x>
       <y>511</y>
       <w>35</w>
-      <h>98</h>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=1..n</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>798</x>
+      <x>805</x>
       <y>497</y>
-      <w>91</w>
+      <w>84</w>
       <h>28</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=1</panel_attributes>
-    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -388,14 +413,14 @@ m2=1</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>693</x>
-      <y>756</y>
+      <y>784</y>
       <w>35</w>
-      <h>119</h>
+      <h>91</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=1..n</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -414,14 +439,14 @@ m2=1..n</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>861</x>
-      <y>651</y>
+      <y>665</y>
       <w>91</w>
-      <h>203</h>
+      <h>182</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=0..1
 m2=0</panel_attributes>
-    <additional_attributes>10.0;270.0;10.0;50.0;100.0;50.0;100.0;10.0</additional_attributes>
+    <additional_attributes>10.0;240.0;10.0;30.0;100.0;30.0;100.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -581,10 +606,10 @@ void setDescription()
       <x>903</x>
       <y>875</y>
       <w>63</w>
-      <h>161</h>
+      <h>231</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;70.0;10.0;60.0;120.0;20.0;210.0</additional_attributes>
+    <additional_attributes>40.0;10.0;70.0;10.0;60.0;120.0;10.0;310.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
