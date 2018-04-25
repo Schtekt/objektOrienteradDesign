@@ -4,63 +4,75 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>264</x>
+      <x>228</x>
       <y>468</y>
       <w>198</w>
       <h>90</h>
     </coordinates>
     <panel_attributes>Interface &lt;&lt;abstract&gt;&gt;
 --
-WarehouseHandler wh
-UserHandler uh
+private:
 int nrOfOptions
+void virtual goBack(int * interface)=0
 
+public:
 string virtual displayOptions()=0
-void virtual runOption(int option, int * interface) =0
-void virtual goBack(int * interface)=0</panel_attributes>
+void virtual runOption(int option, int * interface) =0</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>390</x>
+      <x>348</x>
       <y>600</y>
-      <w>84</w>
-      <h>36</h>
+      <w>96</w>
+      <h>78</h>
     </coordinates>
     <panel_attributes>UserHandler
 --
-std::vector&lt;user&gt;
-int SelectedUser</panel_attributes>
+private:
+int selectedUser
+
+public:
+User getSelectedUser()
+void selectUser(int id)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>402</x>
-      <y>678</y>
-      <w>60</w>
-      <h>36</h>
+      <x>216</x>
+      <y>660</y>
+      <w>126</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>User
 --
+private:
 string name
-bool manager</panel_attributes>
+bool manager
+
+public:
+string getName()
+bool isManager()
+void setName(string newName)
+void changIsManager()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>588</x>
-      <y>480</y>
+      <x>552</x>
+      <y>474</y>
       <w>144</w>
-      <h>102</h>
+      <h>114</h>
     </coordinates>
     <panel_attributes>WarehouseHandler
 --
-std::vector&lt;Warehouse&gt; Warehouses
+private:
 int selectedWarehouse
 
+public:
 Warehouse getWarehouse(int id)
 void addWarehouse()
 bool selectWarehouse(int id)
@@ -71,17 +83,17 @@ Warehouse getCurrentWarehouse()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>672</x>
-      <y>360</y>
+      <x>636</x>
+      <y>348</y>
       <w>180</w>
-      <h>108</h>
+      <h>120</h>
     </coordinates>
     <panel_attributes>Warehouse
 --
-TruckHandler th
-GoodSpaceHandler gsh
+private:
 string name
 
+public:
 GoodSpace getGoodSpace(int[2] id)
 GoodSpaceHandler getGoodSpaceHandler()
 Truck getTruck(int id)
@@ -92,17 +104,17 @@ string getName()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>690</x>
+      <x>654</x>
       <y>708</y>
       <w>150</w>
       <h>96</h>
     </coordinates>
     <panel_attributes>GoodSpaceHandler
 --
-std::vector&lt;std::vector&lt;GoodSpace&gt;&gt;
+private:
 int[2] selectedGoodSpace
-TruckHandler th
 
+public:
 bool select(int[2] pos)
 GoodSpace getCurrentGoodSpace()</panel_attributes>
     <additional_attributes/>
@@ -110,16 +122,17 @@ GoodSpace getCurrentGoodSpace()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>648</x>
+      <x>612</x>
       <y>864</y>
       <w>156</w>
-      <h>90</h>
+      <h>96</h>
     </coordinates>
     <panel_attributes>GoodSpace
 --
-std::vector&lt;Good&gt;
+private:
 float tempC
 
+public:
 Good getCurrentGood()
 void addGood(string description)
 bool editGood(bool locked)
@@ -129,16 +142,18 @@ void removeGood()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>978</x>
-      <y>840</y>
+      <x>942</x>
+      <y>822</y>
       <w>90</w>
-      <h>90</h>
+      <h>108</h>
     </coordinates>
     <panel_attributes>Good
 --
+private:
 bool locked
 string description
 
+public:
 string getDescription()
 bool getLocked()
 void setDescription(string desc)
@@ -148,19 +163,22 @@ void switchLocked()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1122</x>
+      <x>1086</x>
       <y>738</y>
       <w>90</w>
-      <h>108</h>
+      <h>138</h>
     </coordinates>
     <panel_attributes>BigBox
 --
+private:
 float tempMax
 float tempMin
 bool hard
 
+public:
 float getTempMax()
 float getTempMin()
+bool isHard()
 void setTempMax()
 void setTempMin()
 void changeHard()</panel_attributes>
@@ -169,27 +187,31 @@ void changeHard()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1020</x>
+      <x>984</x>
       <y>1062</y>
       <w>60</w>
-      <h>42</h>
+      <h>72</h>
     </coordinates>
     <panel_attributes>Small-item
---</panel_attributes>
+--
+private:
+int size
+
+public:
+int getSize()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>960</x>
+      <x>924</x>
       <y>948</y>
       <w>102</w>
       <h>60</h>
     </coordinates>
     <panel_attributes>GoodCollection
 --
-std::vector&lt;small-items&gt;
-
+public:
 void addSmalItem()
 Small-item getItem(int id)</panel_attributes>
     <additional_attributes/>
@@ -197,17 +219,17 @@ Small-item getItem(int id)</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1020</x>
+      <x>984</x>
       <y>360</y>
       <w>186</w>
       <h>108</h>
     </coordinates>
     <panel_attributes>TruckHandler
 --
-std::vector&lt;Truck&gt; Trucks
+private:
 int selectedTruck
-GoodSpaceHandler gsh
 
+public:
 bool addTruck(int[2] pos)
 bool editTruck(int[2] pos, bool carries, good g)
 bool deleteTruck()
@@ -218,17 +240,18 @@ void putDownGood()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1044</x>
-      <y>504</y>
+      <x>1008</x>
+      <y>510</y>
       <w>102</w>
-      <h>96</h>
+      <h>102</h>
     </coordinates>
     <panel_attributes>Truck
 --
+private:
 int[2] pos
 bool carries
-Good g
 
+public:
 void getPos(int[2] * pos)
 Good getGood()
 void setPos(int[2] pos)
@@ -238,20 +261,20 @@ void setGood(Good g)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1014</x>
+      <x>978</x>
       <y>1002</y>
-      <w>30</w>
+      <w>18</w>
       <h>72</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
-m1=1
-m2=1..n</panel_attributes>
+
+m2=*</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1008</x>
+      <x>972</x>
       <y>924</y>
       <w>18</w>
       <h>36</h>
@@ -262,170 +285,170 @@ m2=1..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1038</x>
+      <x>1002</x>
       <y>774</y>
       <w>96</w>
-      <h>78</h>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;110.0;10.0;10.0;140.0;10.0</additional_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0;140.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1050</x>
+      <x>1014</x>
       <y>462</y>
-      <w>30</w>
-      <h>54</h>
-    </coordinates>
-    <panel_attributes>lt=-
-m1=1
-m2=1..n</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>846</x>
-      <y>450</y>
-      <w>186</w>
-      <h>24</h>
-    </coordinates>
-    <panel_attributes>lt=-
-m1=1
-m2=1</panel_attributes>
-    <additional_attributes>10.0;10.0;290.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>636</x>
-      <y>450</y>
-      <w>48</w>
-      <h>42</h>
-    </coordinates>
-    <panel_attributes>lt=-
-m1=1
-m2=1</panel_attributes>
-    <additional_attributes>10.0;50.0;10.0;10.0;60.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>762</x>
-      <y>462</y>
-      <w>18</w>
-      <h>258</h>
-    </coordinates>
-    <panel_attributes>lt=-
-m1=1
-m2=1</panel_attributes>
-    <additional_attributes>10.0;410.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>456</x>
-      <y>492</y>
-      <w>144</w>
-      <h>24</h>
-    </coordinates>
-    <panel_attributes>lt=-
-m1=1
-m2=1</panel_attributes>
-    <additional_attributes>10.0;10.0;220.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>426</x>
-      <y>552</y>
       <w>18</w>
       <h>60</h>
     </coordinates>
     <panel_attributes>lt=-
-m1=1
-m2=1</panel_attributes>
-    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>426</x>
-      <y>630</y>
-      <w>18</w>
-      <h>60</h>
-    </coordinates>
-    <panel_attributes>lt=-
-m1=1
-m2=1</panel_attributes>
+
+m2=*</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>750</x>
+      <x>810</x>
+      <y>444</y>
+      <w>186</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-
+
+m2=1</panel_attributes>
+    <additional_attributes>10.0;20.0;290.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>450</y>
+      <w>48</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=-
+
+m2=1</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>726</x>
+      <y>462</y>
+      <w>18</w>
+      <h>258</h>
+    </coordinates>
+    <panel_attributes>lt=-
+
+m1=1</panel_attributes>
+    <additional_attributes>10.0;410.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>486</y>
+      <w>144</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-
+
+m2=1</panel_attributes>
+    <additional_attributes>10.0;20.0;220.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>552</y>
+      <w>18</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=-
+
+m1=1</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>336</x>
+      <y>672</y>
+      <w>72</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m2=*</panel_attributes>
+    <additional_attributes>100.0;10.0;100.0;50.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>714</x>
       <y>798</y>
-      <w>30</w>
+      <w>18</w>
       <h>78</h>
     </coordinates>
     <panel_attributes>lt=-
-m1=1
-m2=1..n</panel_attributes>
+
+m2=*</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>798</x>
-      <y>858</y>
+      <x>762</x>
+      <y>852</y>
       <w>192</w>
-      <h>24</h>
+      <h>30</h>
     </coordinates>
     <panel_attributes>lt=-
-m1=1
-m2=1..n</panel_attributes>
-    <additional_attributes>10.0;10.0;300.0;10.0</additional_attributes>
+
+m2=*</panel_attributes>
+    <additional_attributes>10.0;20.0;300.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1008</x>
-      <y>594</y>
-      <w>78</w>
-      <h>258</h>
+      <x>972</x>
+      <y>606</y>
+      <w>72</w>
+      <h>228</h>
     </coordinates>
     <panel_attributes>lt=-
-m1=0..1
-m2=0</panel_attributes>
-    <additional_attributes>10.0;410.0;10.0;30.0;100.0;30.0;100.0;10.0</additional_attributes>
+m1=*
+</panel_attributes>
+    <additional_attributes>10.0;360.0;10.0;30.0;100.0;30.0;100.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>822</x>
+      <x>786</x>
       <y>462</y>
       <w>216</w>
       <h>258</h>
     </coordinates>
     <panel_attributes>lt=-
-m1=1
+
 m2=1</panel_attributes>
-    <additional_attributes>340.0;10.0;340.0;110.0;200.0;110.0;10.0;410.0</additional_attributes>
+    <additional_attributes>340.0;10.0;340.0;110.0;200.0;110.0;200.0;270.0;10.0;270.0;10.0;410.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>72</x>
+      <x>36</x>
       <y>468</y>
       <w>138</w>
-      <h>66</h>
+      <h>96</h>
     </coordinates>
     <panel_attributes>Menu
 --
-Interfaces[5] i
+private:
 int selectedInterface
 
+public:
 void runOption(int option)
 void displayOptions(string options)
 </panel_attributes>
@@ -434,20 +457,20 @@ void displayOptions(string options)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>204</x>
-      <y>498</y>
+      <x>168</x>
+      <y>492</y>
       <w>72</w>
-      <h>24</h>
+      <h>30</h>
     </coordinates>
     <panel_attributes>lt=-
-m1=1
+
 m2=5</panel_attributes>
-    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>330</x>
+      <x>294</x>
       <y>426</y>
       <w>54</w>
       <h>54</h>
@@ -458,13 +481,14 @@ m2=5</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>144</x>
+      <x>108</x>
       <y>366</y>
       <w>192</w>
       <h>84</h>
     </coordinates>
     <panel_attributes>WarehouseScreen
 --
+private:
 bool selectGoodSpace(int[2] pos)
 bool selectTruck(int id)
 void trackTrucks()
@@ -475,13 +499,14 @@ void addGood()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>144</x>
+      <x>108</x>
       <y>276</y>
       <w>192</w>
       <h>84</h>
     </coordinates>
     <panel_attributes>TruckScreen
 --
+private:
 bool moveGood()
 </panel_attributes>
     <additional_attributes/>
@@ -489,7 +514,7 @@ bool moveGood()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>330</x>
+      <x>294</x>
       <y>336</y>
       <w>66</w>
       <h>144</h>
@@ -500,13 +525,14 @@ bool moveGood()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>144</x>
+      <x>108</x>
       <y>186</y>
       <w>192</w>
       <h>84</h>
     </coordinates>
     <panel_attributes>GoodSpaceScreen
 --
+private:
 bool selectGood(int id)
 bool setTemperature(float tempC)
 void remove()
@@ -516,7 +542,7 @@ void remove()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>330</x>
+      <x>294</x>
       <y>252</y>
       <w>78</w>
       <h>228</h>
@@ -527,13 +553,14 @@ void remove()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>144</x>
-      <y>114</y>
+      <x>108</x>
+      <y>108</y>
       <w>192</w>
-      <h>66</h>
+      <h>72</h>
     </coordinates>
     <panel_attributes>GoodScreen
 --
+private:
 bool setMaxTemp(float tempC)
 bool setMinTemp(float tempC)
 void lockUnlock()
@@ -544,7 +571,7 @@ void setDescription()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>330</x>
+      <x>294</x>
       <y>162</y>
       <w>90</w>
       <h>318</h>
@@ -555,39 +582,38 @@ void setDescription()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1044</x>
+      <x>1008</x>
       <y>876</y>
       <w>54</w>
       <h>198</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>40.0;10.0;70.0;10.0;60.0;120.0;10.0;310.0</additional_attributes>
+    <additional_attributes>40.0;10.0;70.0;10.0;70.0;240.0;10.0;240.0;10.0;310.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>462</x>
-      <y>846</y>
-      <w>84</w>
-      <h>54</h>
+      <x>498</x>
+      <y>864</y>
+      <w>90</w>
+      <h>30</h>
     </coordinates>
-    <panel_attributes>We should have a 
-stack as our
-list type of goods
-in a good space
+    <panel_attributes>GoodSpace should 
+hold goods as a stack
 bg=blue</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>144</x>
+      <x>108</x>
       <y>24</y>
       <w>192</w>
-      <h>84</h>
+      <h>78</h>
     </coordinates>
     <panel_attributes>WorldScreen
 --
+private:
 void addWarehouse()
 void selectWarehouse(int id)
 void removeWarehouse()</panel_attributes>
@@ -596,7 +622,7 @@ void removeWarehouse()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>330</x>
+      <x>294</x>
       <y>84</y>
       <w>102</w>
       <h>396</h>
@@ -607,10 +633,10 @@ void removeWarehouse()</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>948</x>
+      <x>912</x>
       <y>684</y>
       <w>312</w>
-      <h>426</h>
+      <h>462</h>
     </coordinates>
     <panel_attributes>GoodPackage
 --
@@ -620,10 +646,10 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>36</x>
+      <x>0</x>
       <y>0</y>
       <w>450</w>
-      <h>744</h>
+      <h>774</h>
     </coordinates>
     <panel_attributes>InterfacePackage
 --
@@ -633,7 +659,7 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>582</x>
+      <x>546</x>
       <y>324</y>
       <w>282</w>
       <h>270</h>
@@ -646,7 +672,7 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>630</x>
+      <x>594</x>
       <y>654</y>
       <w>246</w>
       <h>318</h>
@@ -659,14 +685,29 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>1014</x>
+      <x>978</x>
       <y>330</y>
       <w>252</w>
-      <h>276</h>
+      <h>288</h>
     </coordinates>
     <panel_attributes>TruckPackage
 --
 bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>498</x>
+      <y>720</y>
+      <w>90</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>To make a 2D map
+we should make a 
+2D array/vector for 
+GoodSpaces
+bg=blue</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
