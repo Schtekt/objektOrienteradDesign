@@ -118,6 +118,8 @@
     <ClCompile Include="BigBox.cpp" />
     <ClCompile Include="Good.cpp" />
     <ClCompile Include="GoodCollection.cpp" />
+    <ClCompile Include="GoodSpace.cpp" />
+    <ClCompile Include="GoodSpaceHandler.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Small_Item.cpp" />
   </ItemGroup>
@@ -125,6 +127,8 @@
     <ClInclude Include="BigBox.h" />
     <ClInclude Include="Good.h" />
     <ClInclude Include="GoodCollection.h" />
+    <ClInclude Include="GoodSpace.h" />
+    <ClInclude Include="GoodSpaceHandler.h" />
     <ClInclude Include="Small_Item.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
