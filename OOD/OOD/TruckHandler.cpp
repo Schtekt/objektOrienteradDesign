@@ -11,6 +11,11 @@ TruckHandler::~TruckHandler()
 	//Nothing
 }
 
+Truck * TruckHandler::getTruck(int id)
+{
+	return &trucks[id];
+}
+
 bool TruckHandler::addTruck(int pos[2])
 {
 	bool res = false;

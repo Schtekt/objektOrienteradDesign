@@ -125,6 +125,8 @@
     <ClCompile Include="Small_Item.cpp" />
     <ClCompile Include="Truck.cpp" />
     <ClCompile Include="TruckHandler.cpp" />
+    <ClCompile Include="User.cpp" />
+    <ClCompile Include="UserHandler.cpp" />
     <ClCompile Include="Warehouse.cpp" />
     <ClCompile Include="WarehouseHandler.cpp" />
   </ItemGroup>
@@ -138,6 +140,8 @@
     <ClInclude Include="Small_Item.h" />
     <ClInclude Include="Truck.h" />
     <ClInclude Include="TruckHandler.h" />
+    <ClInclude Include="User.h" />
+    <ClInclude Include="UserHandler.h" />
     <ClInclude Include="Warehouse.h" />
     <ClInclude Include="WarehouseHandler.h" />
     <ClInclude Include="WarehouseScreen.h" />
