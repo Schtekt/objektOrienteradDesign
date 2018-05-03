@@ -1,0 +1,10 @@
+GoodCollection:
+	The vector holds pointers to all goods
+GoodSpaceHandler:
+	getcurrentGoodSpace is changed to return a pointer of a goodspace.
+	added a function "getSize"
+Truck:
+	The good is a pointer...
+	getGood returns a bool, since we do not know if the truck actually holds a object.
+	setGood returns a bool, if the truck already carries a good then we should not be able to switch it.
+	added a function setCarries to edit if a truck carries a good or not.

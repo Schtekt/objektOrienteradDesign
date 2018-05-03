@@ -122,6 +122,8 @@
     <ClCompile Include="GoodSpaceHandler.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Small_Item.cpp" />
+    <ClCompile Include="Truck.cpp" />
+    <ClCompile Include="TruckHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BigBox.h" />
@@ -130,6 +132,8 @@
     <ClInclude Include="GoodSpace.h" />
     <ClInclude Include="GoodSpaceHandler.h" />
     <ClInclude Include="Small_Item.h" />
+    <ClInclude Include="Truck.h" />
+    <ClInclude Include="TruckHandler.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

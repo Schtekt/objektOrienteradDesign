@@ -2,10 +2,10 @@
 
 GoodSpaceHandler::GoodSpaceHandler(unsigned int size[2])
 {
-	for (int i = 0; i < size[0]; i++)
+	for (unsigned int i = 0; i < size[0]; i++)
 	{
 		std::vector<GoodSpace*> tmp;
-		for (int j = 0; j < size[1]; j++)
+		for (unsigned int j = 0; j < size[1]; j++)
 		{
 			tmp.push_back(new GoodSpace(20.0f));
 		}
@@ -17,9 +17,9 @@ GoodSpaceHandler::GoodSpaceHandler(unsigned int size[2])
 
 GoodSpaceHandler::~GoodSpaceHandler()
 {
-	for (int i = 0; i < goodSpaces.size(); i++)
+	for (unsigned int i = 0; i < goodSpaces.size(); i++)
 	{
-		for (int j = 0; j < goodSpaces[i].size(); j++)
+		for (unsigned int j = 0; j < goodSpaces[i].size(); j++)
 		{
 			delete goodSpaces[i][j];
 		}
@@ -44,4 +44,10 @@ bool GoodSpaceHandler::select(int pos [2])
 GoodSpace * GoodSpaceHandler::getCurrentGoodSpace()
 {
 	return goodSpaces[selectedGoodSpace[0]][selectedGoodSpace[1]];
+}
+
+void GoodSpaceHandler::getSize(int * size)
+{
+	size[0] = goodSpaces.size();
+	size[1] = goodSpaces[0].size();
 }

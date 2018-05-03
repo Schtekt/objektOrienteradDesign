@@ -7,7 +7,7 @@ Small_Item::Small_Item(std::string desc, int size): Good(desc)
 
 Small_Item::~Small_Item()
 {
-	// nothing
+	//Nothing
 }
 
 int Small_Item::getSize()

@@ -9,5 +9,5 @@ public:
 	Small_Item(std::string desc, int size);
 	~Small_Item();
 	int getSize();
-}
+};
 #endif

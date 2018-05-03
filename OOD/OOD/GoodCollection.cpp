@@ -2,8 +2,8 @@
 
 void GoodCollection::addSmallItem(Small_Item item)
 {
-	int totSize;
-	for (int i = 0; i < items.size(); i++)
+	int totSize = 0;
+	for (unsigned int i = 0; i < items.size(); i++)
 	{
 		totSize += items[i].getSize();
 	}
