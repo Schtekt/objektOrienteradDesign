@@ -15,6 +15,8 @@ public:
 	~TruckHandler();
 	//CHANGE! added a function "getTruck".
 	Truck * getTruck(int id);
+	//CHANGE! added function for nrOf.
+	int nrOfTrucks();
 	bool addTruck(int pos[2]);
 	bool editTruck(int pos[2], bool carries, Good * g);
 	bool deleteTruck();
