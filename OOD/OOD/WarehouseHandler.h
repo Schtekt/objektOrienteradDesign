@@ -8,11 +8,11 @@ class WarehouseHandler
 private:
 	int selectedWarehouse;
 public:
-	WarehouseHandler(int selectedWarehouse);
+	WarehouseHandler();
 	~WarehouseHandler();
 	Warehouse* getWarehouse(int id);
 	void addWarehouse();
-	bool selectedWarehouse(int id);
+	bool getSelectedWarehouse(int id);
 	bool deleteWarehouse(int id);
 	Warehouse* getCurrentWarehouse();
 };

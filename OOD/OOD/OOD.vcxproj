@@ -120,10 +120,13 @@
     <ClCompile Include="GoodCollection.cpp" />
     <ClCompile Include="GoodSpace.cpp" />
     <ClCompile Include="GoodSpaceHandler.cpp" />
+    <ClCompile Include="Interface.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Small_Item.cpp" />
     <ClCompile Include="Truck.cpp" />
     <ClCompile Include="TruckHandler.cpp" />
+    <ClCompile Include="Warehouse.cpp" />
+    <ClCompile Include="WarehouseHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BigBox.h" />
@@ -131,9 +134,13 @@
     <ClInclude Include="GoodCollection.h" />
     <ClInclude Include="GoodSpace.h" />
     <ClInclude Include="GoodSpaceHandler.h" />
+    <ClInclude Include="Interface.h" />
     <ClInclude Include="Small_Item.h" />
     <ClInclude Include="Truck.h" />
     <ClInclude Include="TruckHandler.h" />
+    <ClInclude Include="Warehouse.h" />
+    <ClInclude Include="WarehouseHandler.h" />
+    <ClInclude Include="WarehouseScreen.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

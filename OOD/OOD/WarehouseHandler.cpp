@@ -1,8 +1,8 @@
 #include "WarehouseHandler.h"
 
-WarehouseHandler::WarehouseHandler(int selectedWarehouse)
+WarehouseHandler::WarehouseHandler()
 {
-	this->selectedWarehouse = selectedWarehouse;
+	this->selectedWarehouse = -1;
 }
 
 WarehouseHandler::~WarehouseHandler()
@@ -18,7 +18,7 @@ void WarehouseHandler::addWarehouse()
 {
 }
 
-bool WarehouseHandler::selectedWarehouse(int id)
+bool WarehouseHandler::getSelectedWarehouse(int id)
 {
 	return false;
 }
