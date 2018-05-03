@@ -10,7 +10,10 @@ Truck::Truck(int pos[2])
 
 Truck::~Truck()
 {
-	//Nothing
+	if (carries)
+	{
+		delete good;
+	}
 }
 
 void Truck::getPos(int * pos[2])

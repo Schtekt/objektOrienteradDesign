@@ -12,6 +12,7 @@ private:
 	std::vector<Truck> trucks;
 public:
 	TruckHandler(GoodSpaceHandler * gsh);
+	~TruckHandler();
 	bool addTruck(int pos[2]);
 	bool editTruck(int pos[2], bool carries, Good * g);
 	bool deleteTruck();

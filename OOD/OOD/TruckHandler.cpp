@@ -6,6 +6,11 @@ TruckHandler::TruckHandler(GoodSpaceHandler * gsh)
 	selectedTruck = -1;
 }
 
+TruckHandler::~TruckHandler()
+{
+	//Nothing
+}
+
 bool TruckHandler::addTruck(int pos[2])
 {
 	bool res = false;
