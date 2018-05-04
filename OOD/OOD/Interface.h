@@ -2,9 +2,11 @@
 #define INTERFACE_H
 #include "WarehouseHandler.h"
 #include "UserHandler.h"
+#include <iostream>
+
 class Interface
 {
-private:
+protected:
 	int nrOfOptions;
 	WarehouseHandler * wh;
 	UserHandler * uh;
@@ -12,8 +14,8 @@ private:
 public:
 	Interface(int nrOfOptions);
 	~Interface();
-	std::string virtual displayOptions() = 0;
-	void virtual runOption(int option, int * interface) = 0;
+	virtual std::string displayOptions() = 0;
+	virtual void runOption(int option, int * interface) = 0;
 };
 
 #endif

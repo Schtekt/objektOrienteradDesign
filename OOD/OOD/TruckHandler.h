@@ -22,5 +22,7 @@ public:
 	bool deleteTruck();
 	void carryGood();
 	void putDown();
+	//CHANGE! Added function selectTruck
+	bool selectTruck(int id);
 };
 #endif

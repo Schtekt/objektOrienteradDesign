@@ -3,3 +3,79 @@
 WareHouseScreen::WareHouseScreen(): Interface(4)
 {
 }
+
+bool WareHouseScreen::selectGoodSpace()
+{
+	bool res = false;
+	try
+	{
+		int pos[2];
+		std::cout << "Please enter an position\n x: ";
+		std::cin >> pos[0];
+		std::cout << "y: ";
+		std::cin >> pos[1];
+
+		wh->getCurrentWarehouse()->getGoodSpaceHandler()->select(pos);
+		res = true;
+	}
+	catch (std::string e)
+	{
+		std::cout << "Error! someting went wrong!";
+	}
+
+	return res;
+}
+
+bool WareHouseScreen::selectTruck()
+{
+	bool res = false;
+	try
+	{
+		int id;
+
+		while (res == false)
+		{
+			std::cout << "Please enter a truck ID you wish to select: ";
+			std::cin >> id;
+
+			res = wh->getCurrentWarehouse()->getTruckHandler()->selectTruck(id);
+
+			if (res == false)
+			{
+				std::cout << "Please enter a valid id!\n";
+			}
+		}
+	}
+	catch (std::string e)
+	{
+		std::cout << "Something went wrong!";
+	}
+	return res;
+}
+
+bool WareHouseScreen::trackTrucks()
+{
+	std::string tmp;
+	tmp = wh->getCurrentWarehouse()->TrackTrucks();
+	std::cout << tmp;
+	return true;
+}
+
+void WareHouseScreen::addGood()
+{
+	std::string descTmp;
+	std::cout << "Please enter a description for this good!";
+	std::cin >> descTmp;
+	int pos[2];
+	pos[0] = 0;
+	pos[1] = 0;
+	Good * g = new Good(descTmp);
+	wh->getCurrentWarehouse()->getGoodSpace(pos)->addGood(g);
+}
+
+std::string WareHouseScreen::displayOptions()
+{
+	return "1. Select a goodspace\n 2. Select a Truck\n 3. Track Trucks\n 4. Add a Good to warehouse\n";
+}
+
+

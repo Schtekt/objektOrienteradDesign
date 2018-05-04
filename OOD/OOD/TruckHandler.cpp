@@ -84,3 +84,14 @@ void TruckHandler::putDown()
 		trucks[selectedTruck].setCarries(false);
 	}
 }
+
+bool TruckHandler::selectTruck(int id)
+{
+	bool res = false;
+	if (id >= 0 && id < trucks.size())
+	{
+		selectedTruck = id;
+		res = true;
+	}
+	return res;
+}
