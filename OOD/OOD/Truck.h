@@ -11,7 +11,7 @@ public:
 	Truck(int pos[2]);
 	~Truck();
 	// CHANGES! again, we use good pointers instead of pure objects.
-	void getPos(int * pos[2]);
+	void getPos(int pos[2]);
 	//CHANGE! getGood is made into a bool instead where the wanted value is pu inside the inserted pointer instead
 	// this is to avoid using exceptions.
 	bool getGood(Good * returnValue);

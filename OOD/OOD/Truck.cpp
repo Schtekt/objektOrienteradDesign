@@ -16,10 +16,10 @@ Truck::~Truck()
 	}
 }
 
-void Truck::getPos(int * pos[2])
+void Truck::getPos(int pos[2])
 {
-	pos[0] = &this->pos[0];
-	pos[1] = &this->pos[1];
+	pos[0] = this->pos[0];
+	pos[1] = this->pos[1];
 }
 
 bool Truck::getGood(Good * returnValue)
