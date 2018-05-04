@@ -11,24 +11,46 @@ WarehouseHandler::~WarehouseHandler()
 
 Warehouse * WarehouseHandler::getWarehouse(int id)
 {
-	return nullptr;
+	return &vectorWarehouses[id];
 }
 
 void WarehouseHandler::addWarehouse()
 {
+	vectorWarehouses.push_back(Warehouse());
 }
 
-bool WarehouseHandler::getSelectedWarehouse(int id)
+bool WarehouseHandler::selectWarehouse(int id)
 {
-	return false;
+	bool res = false;
+	if (id >= 0 && id < vectorWarehouses.size())
+	{
+		selectedWarehouse = id;
+		res = true;
+	}
+
+	return res;
 }
 
 bool WarehouseHandler::deleteWarehouse(int id)
 {
-	return false;
+	bool res = false;
+	if (id >= 0 && id < vectorWarehouses.size())
+	{
+		if (selectedWarehouse == id)
+			selectedWarehouse = -1;
+		else if (id < selectedWarehouse)
+			selectedWarehouse--;
+
+		vectorWarehouses.erase(vectorWarehouses.begin() + id);
+
+		res = true;
+
+	}
+
+	return res;
 }
 
 Warehouse * WarehouseHandler::getCurrentWarehouse()
 {
-	return nullptr;
+	return &vectorWarehouses[selectedWarehouse];
 }
