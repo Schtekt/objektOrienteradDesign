@@ -78,4 +78,25 @@ std::string WareHouseScreen::displayOptions()
 	return "1. Select a goodspace\n 2. Select a Truck\n 3. Track Trucks\n 4. Add a Good to warehouse\n";
 }
 
+void WareHouseScreen::runOption(int option, int * iF)
+{
+	switch (option)
+	{
+	case 1:
+		selectGoodSpace();
+		iF[0] = 3;
+		break;
+	case 2:
+		selectTruck();
+		iF[0] = 2;
+		break;
+	case 3:
+		trackTrucks();
+		break;
+	case 4:
+		addGood();
+		break;
+	}
+}
+
 
