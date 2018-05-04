@@ -5,6 +5,7 @@ class WareHouseScreen: public Interface
 {
 private:
 public:
+	WareHouseScreen();
 	bool selectGoodSpace(int pos[2]);
 	bool selectTruck(int id);
 	bool trackTrucks();

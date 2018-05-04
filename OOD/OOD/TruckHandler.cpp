@@ -16,6 +16,11 @@ Truck * TruckHandler::getTruck(int id)
 	return &trucks[id];
 }
 
+int TruckHandler::nrOfTrucks()
+{
+	return trucks.size();
+}
+
 bool TruckHandler::addTruck(int pos[2])
 {
 	bool res = false;

@@ -129,6 +129,7 @@
     <ClCompile Include="UserHandler.cpp" />
     <ClCompile Include="Warehouse.cpp" />
     <ClCompile Include="WarehouseHandler.cpp" />
+    <ClCompile Include="WarehouseScreen.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BigBox.h" />
