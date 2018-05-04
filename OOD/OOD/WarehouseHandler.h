@@ -7,12 +7,13 @@ class WarehouseHandler
 {
 private:
 	int selectedWarehouse;
+	std::vector<Warehouse> vectorWarehouses;
 public:
 	WarehouseHandler();
 	~WarehouseHandler();
 	Warehouse* getWarehouse(int id);
 	void addWarehouse();
-	bool getSelectedWarehouse(int id);
+	bool selectWarehouse(int id);
 	bool deleteWarehouse(int id);
 	Warehouse* getCurrentWarehouse();
 };

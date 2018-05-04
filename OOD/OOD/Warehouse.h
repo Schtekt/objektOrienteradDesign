@@ -8,12 +8,15 @@ class Warehouse
 {
 private:
 	std::string name;
+	GoodSpaceHandler * gsh;
+	TruckHandler * th;
 public:
-	Warehouse(std::string name);
+	Warehouse(std::string name = "");
 	~Warehouse();
-	GoodSpace* getGoodSpace(int size[2]);
+	GoodSpace* getGoodSpace(int id[2]);
 	GoodSpaceHandler* getGoodSpaceHandler();
-	Truck* getTruck(int id);
+	TruckHandler* getTruckHandler();
+	//CHANGED: Truck changed to TruckHandler 
 	std::string TrackTrucks();
 	std::string getName();
 };
