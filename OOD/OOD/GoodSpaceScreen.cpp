@@ -8,6 +8,7 @@ void GoodSpaceScreen::setTemperature()
 	std::cin >> temp;
 
 	wh->getCurrentWarehouse()->getGoodSpaceHandler()->getCurrentGoodSpace()->setTemp(temp);
+
 }
 
 void GoodSpaceScreen::selectGood()

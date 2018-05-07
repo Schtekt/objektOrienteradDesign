@@ -24,5 +24,7 @@ public:
 	void putDown();
 	//CHANGE! Added function selectTruck
 	bool selectTruck(int id);
+	//CHANGE! Added function getSelectedTruck
+	Truck * getSelectedTruck();
 };
 #endif

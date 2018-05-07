@@ -95,3 +95,8 @@ bool TruckHandler::selectTruck(int id)
 	}
 	return res;
 }
+
+Truck * TruckHandler::getSelectedTruck()
+{
+	return &trucks[selectedTruck];
+}

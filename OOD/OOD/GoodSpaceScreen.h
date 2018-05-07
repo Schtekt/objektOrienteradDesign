@@ -5,8 +5,8 @@ class GoodSpaceScreen : public Interface
 {
 private:
 public:
-	bool selectGood();
-	bool setTemperature();
+	void selectGood();
+	void setTemperature();
 	void remove();
 };
 

@@ -17,13 +17,7 @@ GoodSpaceHandler::GoodSpaceHandler(unsigned int size[2])
 
 GoodSpaceHandler::~GoodSpaceHandler()
 {
-	for (unsigned int i = 0; i < goodSpaces.size(); i++)
-	{
-		for (unsigned int j = 0; j < goodSpaces[i].size(); j++)
-		{
-			delete goodSpaces[i][j];
-		}
-	}
+	// Nothing!
 }
 
 bool GoodSpaceHandler::select(int pos [2])
@@ -46,8 +40,18 @@ GoodSpace * GoodSpaceHandler::getCurrentGoodSpace()
 	return goodSpaces[selectedGoodSpace[0]][selectedGoodSpace[1]];
 }
 
+GoodSpace * GoodSpaceHandler::getGoodSpace(int pos[2])
+{
+	return goodSpaces[pos[0]][pos[1]];
+}
+
 void GoodSpaceHandler::getSize(int * size)
 {
 	size[0] = goodSpaces.size();
 	size[1] = goodSpaces[0].size();
+}
+
+void GoodSpaceHandler::getSelectedPos(int pos[2])
+{
+	pos = selectedGoodSpace;
 }
