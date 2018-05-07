@@ -1,2 +1,12 @@
-﻿  Menu.cpp
+﻿  Interface.cpp
+  Menu.cpp
+  TruckHandler.cpp
+c:\users\jacob a\documents\github\objektorienteraddesign\ood\ood\truckhandler.cpp(58): warning C4018: '<': signed/unsigned mismatch
+c:\users\jacob a\documents\github\objektorienteraddesign\ood\ood\truckhandler.cpp(91): warning C4018: '<': signed/unsigned mismatch
+  Warehouse.cpp
+  WarehouseHandler.cpp
+c:\users\jacob a\documents\github\objektorienteraddesign\ood\ood\warehousehandler.cpp(25): warning C4018: '<': signed/unsigned mismatch
+c:\users\jacob a\documents\github\objektorienteraddesign\ood\ood\warehousehandler.cpp(37): warning C4018: '<': signed/unsigned mismatch
+  WarehouseScreen.cpp
+  Generating Code...
   OOD.vcxproj -> C:\Users\Jacob A\Documents\GitHub\objektOrienteradDesign\OOD\Debug\OOD.exe
