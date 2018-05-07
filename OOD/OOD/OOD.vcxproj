@@ -131,6 +131,7 @@
     <ClCompile Include="Warehouse.cpp" />
     <ClCompile Include="WarehouseHandler.cpp" />
     <ClCompile Include="WarehouseScreen.cpp" />
+    <ClCompile Include="WorldScreen.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BigBox.h" />
@@ -148,6 +149,7 @@
     <ClInclude Include="Warehouse.h" />
     <ClInclude Include="WarehouseHandler.h" />
     <ClInclude Include="WarehouseScreen.h" />
+    <ClInclude Include="WorldScreen.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
