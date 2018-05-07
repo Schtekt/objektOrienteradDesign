@@ -10,7 +10,7 @@ protected:
 	int nrOfOptions;
 	WarehouseHandler * wh;
 	UserHandler * uh;
-	void virtual goBack(int * Interface) = 0;
+	void goBack(int * iF);
 public:
 	Interface(int nrOfOptions);
 	~Interface();
