@@ -14,9 +14,9 @@ Warehouse * WarehouseHandler::getWarehouse(int id)
 	return &vectorWarehouses[id];
 }
 
-void WarehouseHandler::addWarehouse()
+void WarehouseHandler::addWarehouse(std::string name)
 {
-	vectorWarehouses.push_back(Warehouse());
+	vectorWarehouses.push_back(Warehouse(name));
 }
 
 bool WarehouseHandler::selectWarehouse(int id)
@@ -53,4 +53,9 @@ bool WarehouseHandler::deleteWarehouse(int id)
 Warehouse * WarehouseHandler::getCurrentWarehouse()
 {
 	return &vectorWarehouses[selectedWarehouse];
+}
+
+int WarehouseHandler::nrOfWarehouses()
+{
+	return vectorWarehouses.size();
 }
