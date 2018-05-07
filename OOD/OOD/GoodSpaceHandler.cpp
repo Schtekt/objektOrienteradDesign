@@ -46,8 +46,18 @@ GoodSpace * GoodSpaceHandler::getCurrentGoodSpace()
 	return goodSpaces[selectedGoodSpace[0]][selectedGoodSpace[1]];
 }
 
+GoodSpace * GoodSpaceHandler::getGoodSpace(int pos[2])
+{
+	return goodSpaces[pos[0]][pos[1]];
+}
+
 void GoodSpaceHandler::getSize(int * size)
 {
 	size[0] = goodSpaces.size();
 	size[1] = goodSpaces[0].size();
+}
+
+void GoodSpaceHandler::getSelectedPos(int pos[2])
+{
+	pos = selectedGoodSpace;
 }
