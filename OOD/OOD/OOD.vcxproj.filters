@@ -63,10 +63,7 @@
     <ClCompile Include="Menu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="WorldScreen.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GoodScreen.cpp">
+    <ClCompile Include="GoodSpaceScreen.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="TruckScreen.cpp">
@@ -119,10 +116,7 @@
     <ClInclude Include="Menu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="WorldScreen.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GoodScreen.h">
+    <ClInclude Include="GoodSpaceScreen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TruckScreen.h">

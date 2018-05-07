@@ -121,6 +121,7 @@
     <ClCompile Include="GoodScreen.cpp" />
     <ClCompile Include="GoodSpace.cpp" />
     <ClCompile Include="GoodSpaceHandler.cpp" />
+    <ClCompile Include="GoodSpaceScreen.cpp" />
     <ClCompile Include="Interface.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Menu.cpp" />
@@ -142,6 +143,7 @@
     <ClInclude Include="GoodScreen.h" />
     <ClInclude Include="GoodSpace.h" />
     <ClInclude Include="GoodSpaceHandler.h" />
+    <ClInclude Include="GoodSpaceScreen.h" />
     <ClInclude Include="Interface.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Small_Item.h" />

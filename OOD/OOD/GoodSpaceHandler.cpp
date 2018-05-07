@@ -17,13 +17,7 @@ GoodSpaceHandler::GoodSpaceHandler(unsigned int size[2])
 
 GoodSpaceHandler::~GoodSpaceHandler()
 {
-	for (unsigned int i = 0; i < goodSpaces.size(); i++)
-	{
-		for (unsigned int j = 0; j < goodSpaces[i].size(); j++)
-		{
-			delete goodSpaces[i][j];
-		}
-	}
+	// Nothing!
 }
 
 bool GoodSpaceHandler::select(int pos [2])
