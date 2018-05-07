@@ -12,9 +12,11 @@ public:
 	WarehouseHandler();
 	~WarehouseHandler();
 	Warehouse* getWarehouse(int id);
-	void addWarehouse();
+	void addWarehouse(std::string name);
 	bool selectWarehouse(int id);
 	bool deleteWarehouse(int id);
 	Warehouse* getCurrentWarehouse();
+	//CHANGE! added a function to determine max nr of warehouses
+	int nrOfWarehouses();
 };
 #endif

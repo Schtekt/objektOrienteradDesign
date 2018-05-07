@@ -14,4 +14,4 @@ public:
 	void runOption(int option, int * interface) override;
 };
 
-#endif // !WAREHOUSESCREEN_H
+#endif
