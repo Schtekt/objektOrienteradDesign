@@ -1,5 +1,27 @@
 #include "WorldScreen.h"
 
+std::string WorldScreen::displayOptions()
+{
+	return "1. Add a warehouse\n 2. Select a warehouse\n 3. Remove a warehouse.";
+}
+
+void WorldScreen::runOption(int option, int *)
+{
+	switch (option)
+	{
+	case 1:
+		addWarehouse();
+		break;
+	case 2:
+		selectWarehouse();
+		// sätt ut warehouseScreenen här...
+		break;
+	case 3:
+		removeWarehouse();
+		break;
+	}
+}
+
 void WorldScreen::addWarehouse()
 {
 	std::string name;
