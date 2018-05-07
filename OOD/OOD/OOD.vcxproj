@@ -118,6 +118,7 @@
     <ClCompile Include="BigBox.cpp" />
     <ClCompile Include="Good.cpp" />
     <ClCompile Include="GoodCollection.cpp" />
+    <ClCompile Include="GoodScreen.cpp" />
     <ClCompile Include="GoodSpace.cpp" />
     <ClCompile Include="GoodSpaceHandler.cpp" />
     <ClCompile Include="Interface.cpp" />
@@ -137,6 +138,7 @@
     <ClInclude Include="BigBox.h" />
     <ClInclude Include="Good.h" />
     <ClInclude Include="GoodCollection.h" />
+    <ClInclude Include="GoodScreen.h" />
     <ClInclude Include="GoodSpace.h" />
     <ClInclude Include="GoodSpaceHandler.h" />
     <ClInclude Include="Interface.h" />
