@@ -1,12 +1,55 @@
-﻿  Interface.cpp
-  Menu.cpp
-  TruckHandler.cpp
-c:\users\jacob a\documents\github\objektorienteraddesign\ood\ood\truckhandler.cpp(58): warning C4018: '<': signed/unsigned mismatch
-c:\users\jacob a\documents\github\objektorienteraddesign\ood\ood\truckhandler.cpp(91): warning C4018: '<': signed/unsigned mismatch
-  Warehouse.cpp
-  WarehouseHandler.cpp
-c:\users\jacob a\documents\github\objektorienteraddesign\ood\ood\warehousehandler.cpp(25): warning C4018: '<': signed/unsigned mismatch
-c:\users\jacob a\documents\github\objektorienteraddesign\ood\ood\warehousehandler.cpp(37): warning C4018: '<': signed/unsigned mismatch
-  WarehouseScreen.cpp
+﻿  main.cpp
+c:\users\boss\desktop\uml\ood\ood\main.cpp(28): warning C4018: '<': signed/unsigned mismatch
+  GoodSpaceHandler.cpp
+c:\users\boss\desktop\uml\ood\ood\goodspacehandler.cpp(26): warning C4018: '<': signed/unsigned mismatch
+c:\users\boss\desktop\uml\ood\ood\goodspacehandler.cpp(28): warning C4018: '<': signed/unsigned mismatch
+  GoodSpace.cpp
+c:\users\boss\desktop\uml\ood\ood\goodspace.cpp(51): warning C4018: '<': signed/unsigned mismatch
+  Good.cpp
   Generating Code...
-  OOD.vcxproj -> C:\Users\Jacob A\Documents\GitHub\objektOrienteradDesign\OOD\Debug\OOD.exe
+  Compiling...
+  WorldScreen.cpp
+c:\users\boss\desktop\uml\ood\ood\worldscreen.cpp(39): warning C4552: '+': operator has no effect; expected operator with side-effect
+  WarehouseScreen.cpp
+c:\users\boss\desktop\uml\ood\ood\warehousescreen.cpp(73): error C2664: 'void GoodSpace::addGood(Good)': cannot convert argument 1 from 'Good *' to 'Good'
+  c:\users\boss\desktop\uml\ood\ood\warehousescreen.cpp(73): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+  WarehouseHandler.cpp
+c:\users\boss\desktop\uml\ood\ood\warehousehandler.cpp(25): warning C4018: '<': signed/unsigned mismatch
+c:\users\boss\desktop\uml\ood\ood\warehousehandler.cpp(37): warning C4018: '<': signed/unsigned mismatch
+  Warehouse.cpp
+  TruckHandler.cpp
+c:\users\boss\desktop\uml\ood\ood\truckhandler.cpp(58): warning C4018: '<': signed/unsigned mismatch
+c:\users\boss\desktop\uml\ood\ood\truckhandler.cpp(71): error C2039: 'getCurrentGood': is not a member of 'GoodSpace'
+  c:\users\boss\desktop\uml\ood\ood\goodspace.h(6): note: see declaration of 'GoodSpace'
+c:\users\boss\desktop\uml\ood\ood\truckhandler.cpp(72): error C2660: 'GoodSpace::removeGood': function does not take 0 arguments
+c:\users\boss\desktop\uml\ood\ood\truckhandler.cpp(83): error C2664: 'void GoodSpace::addGood(Good)': cannot convert argument 1 from 'Good *' to 'Good'
+  c:\users\boss\desktop\uml\ood\ood\truckhandler.cpp(83): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+c:\users\boss\desktop\uml\ood\ood\truckhandler.cpp(91): warning C4018: '<': signed/unsigned mismatch
+  Menu.cpp
+  Interface.cpp
+  GoodSpaceScreen.cpp
+  GoodScreen.cpp
+c:\users\boss\desktop\uml\ood\ood\goodscreen.cpp(11): error C2039: 'getCurrentGood': is not a member of 'GoodSpace'
+  c:\users\boss\desktop\uml\ood\ood\goodspace.h(6): note: see declaration of 'GoodSpace'
+c:\users\boss\desktop\uml\ood\ood\goodscreen.cpp(11): error C2227: left of '->getTempMin' must point to class/struct/union/generic type
+c:\users\boss\desktop\uml\ood\ood\goodscreen.cpp(34): error C2039: 'getCurrentGood': is not a member of 'GoodSpace'
+  c:\users\boss\desktop\uml\ood\ood\goodspace.h(6): note: see declaration of 'GoodSpace'
+c:\users\boss\desktop\uml\ood\ood\goodscreen.cpp(34): error C2227: left of '->getTempMin' must point to class/struct/union/generic type
+c:\users\boss\desktop\uml\ood\ood\goodscreen.cpp(51): error C2039: 'getCurrentGood': is not a member of 'GoodSpace'
+  c:\users\boss\desktop\uml\ood\ood\goodspace.h(6): note: see declaration of 'GoodSpace'
+c:\users\boss\desktop\uml\ood\ood\goodscreen.cpp(51): error C2227: left of '->getLocked' must point to class/struct/union/generic type
+c:\users\boss\desktop\uml\ood\ood\goodscreen.cpp(54): error C2039: 'getCurrentGood': is not a member of 'GoodSpace'
+  c:\users\boss\desktop\uml\ood\ood\goodspace.h(6): note: see declaration of 'GoodSpace'
+c:\users\boss\desktop\uml\ood\ood\goodscreen.cpp(54): error C2227: left of '->switchLocked' must point to class/struct/union/generic type
+c:\users\boss\desktop\uml\ood\ood\goodscreen.cpp(59): error C2039: 'getCurrentGood': is not a member of 'GoodSpace'
+  c:\users\boss\desktop\uml\ood\ood\goodspace.h(6): note: see declaration of 'GoodSpace'
+c:\users\boss\desktop\uml\ood\ood\goodscreen.cpp(59): error C2227: left of '->switchLocked' must point to class/struct/union/generic type
+c:\users\boss\desktop\uml\ood\ood\goodscreen.cpp(70): error C2039: 'getCurrentGood': is not a member of 'GoodSpace'
+  c:\users\boss\desktop\uml\ood\ood\goodspace.h(6): note: see declaration of 'GoodSpace'
+c:\users\boss\desktop\uml\ood\ood\goodscreen.cpp(70): error C2227: left of '->setDescription' must point to class/struct/union/generic type
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  Truck.cpp
+  Small_Item.cpp
+  GoodCollection.cpp
+  BigBox.cpp

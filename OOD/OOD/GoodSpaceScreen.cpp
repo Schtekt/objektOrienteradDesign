@@ -6,7 +6,7 @@ bool GoodSpaceScreen::setTemperature()
 	std::cout << "Enter a temprature for the good: ";
 	std::cin >> temp;
 
-	wh->getCurrentWarehouse()->getGoodSpaceHandler()->getCurrentGoodSpace()->
+	//wh->getCurrentWarehouse()->getGoodSpaceHandler()->getCurrentGoodSpace()->
 	return false;
 }
 
