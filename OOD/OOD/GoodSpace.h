@@ -15,5 +15,8 @@ public:
 	void addGood(Good * newGood);
 	bool editGood(bool locked);
 	void removeGood();
+	// CHANGE! Added a get and set function for temperature!
+	float getTemp();
+	void setTemp(float temp);
 };
 #endif

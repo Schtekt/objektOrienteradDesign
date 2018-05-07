@@ -4,12 +4,13 @@
 class WareHouseScreen: public Interface 
 {
 private:
-public:
-	WareHouseScreen();
 	bool selectGoodSpace();
 	bool selectTruck();
 	bool trackTrucks();
 	void addGood();
+public:
+	WareHouseScreen();
+
 	std::string displayOptions() override;
 	void runOption(int option, int * interface) override;
 };

@@ -35,3 +35,13 @@ void GoodSpace::removeGood()
 {
 	goods.pop();
 }
+
+float GoodSpace::getTemp()
+{
+	return tempC;
+}
+
+void GoodSpace::setTemp(float temp)
+{
+	this->tempC = temp;
+}
