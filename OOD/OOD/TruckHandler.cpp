@@ -34,7 +34,7 @@ bool TruckHandler::addTruck(int pos[2])
 	return res;
 }
 
-bool TruckHandler::editTruck(int pos[2], bool carries, Good * g)
+bool TruckHandler::editTruck(int pos[2], bool carries, Good g)
 {
 	int size[2];
 	gsh->getSize(size);
@@ -69,9 +69,9 @@ void TruckHandler::carryGood()
 	if (trucks[selectedTruck].getGood(g) == false)
 	{
 		g = gsh->getCurrentGoodSpace()->getCurrentGood();
-		gsh->getCurrentGoodSpace()->removeGood();
+		gsh->getCurrentGoodSpace()->removeGood(gsh->getCurrentGoodSpace()->getSelectedPos());
 		trucks[selectedTruck].setCarries(true);
-		trucks[selectedTruck].setGood(g);
+		trucks[selectedTruck].setGood(*g);
 	}
 }
 
@@ -80,7 +80,8 @@ void TruckHandler::putDown()
 	Good * g = nullptr;
 	if (trucks[selectedTruck].getGood(g) == true)
 	{
-		gsh->getCurrentGoodSpace()->addGood(g);
+		gsh->getCurrentGoodSpace()->addGood(*g);
+		delete g;
 		trucks[selectedTruck].setCarries(false);
 	}
 }

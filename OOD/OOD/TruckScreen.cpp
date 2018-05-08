@@ -3,12 +3,12 @@
 void TruckScreen::pickUp()
 {
 	Truck * truck = wh->getCurrentWarehouse()->getTruckHandler()->getSelectedTruck();
-	if (truck->setGood(wh->getCurrentWarehouse()->getGoodSpaceHandler()->getCurrentGoodSpace()->getCurrentGood()))
+	if (truck->setGood(*wh->getCurrentWarehouse()->getGoodSpaceHandler()->getCurrentGoodSpace()->getCurrentGood()))
 	{
 		int pos[2];
 		wh->getCurrentWarehouse()->getGoodSpaceHandler()->getSelectedPos(pos);
 		truck->setPos(pos);
-		wh->getCurrentWarehouse()->getGoodSpaceHandler()->getCurrentGoodSpace()->removeGood();
+		wh->getCurrentWarehouse()->getGoodSpaceHandler()->getCurrentGoodSpace()->removeGood(wh->getCurrentWarehouse()->getGoodSpaceHandler()->getCurrentGoodSpace()->getSelectedPos());
 	}
 	else
 	{
@@ -35,14 +35,16 @@ void TruckScreen::putDown()
 		if (pos[0] >= 0 && pos[0] < size[0] && pos[1] >= 0 && pos[1] < size[1])
 		{
 			truck->setPos(pos);
-			w->getGoodSpaceHandler()->getGoodSpace(pos)->addGood(g);
+			w->getGoodSpaceHandler()->getGoodSpace(pos)->addGood(*g);
 			truck->setCarries(false);
 		}
 	}
 }
 
-TruckScreen::TruckScreen(): Interface(3)
+TruckScreen::TruckScreen(WarehouseHandler * wh, UserHandler * uh): Interface(3)
 {
+	this->wh = wh;
+	this->uh = uh;
 }
 
 TruckScreen::~TruckScreen()

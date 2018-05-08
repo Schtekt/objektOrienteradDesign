@@ -1,7 +1,9 @@
 #include "WarehouseScreen.h"
 
-WarehouseScreen::WarehouseScreen(): Interface(4)
+WarehouseScreen::WarehouseScreen(WarehouseHandler * wh, UserHandler * uh): Interface(4)
 {
+	this->wh = wh;
+	this->uh = uh;
 }
 
 WarehouseScreen::~WarehouseScreen()
@@ -74,7 +76,7 @@ void WarehouseScreen::addGood()
 	pos[0] = 0;
 	pos[1] = 0;
 	Good * g = new Good(descTmp);
-	wh->getCurrentWarehouse()->getGoodSpace(pos)->addGood(g);
+	wh->getCurrentWarehouse()->getGoodSpace(pos)->addGood(*g);
 }
 
 std::string WarehouseScreen::displayOptions()

@@ -18,7 +18,7 @@ public:
 	//CHANGE! added function for nrOf.
 	int nrOfTrucks();
 	bool addTruck(int pos[2]);
-	bool editTruck(int pos[2], bool carries, Good * g);
+	bool editTruck(int pos[2], bool carries, Good g);
 	bool deleteTruck();
 	void carryGood();
 	void putDown();

@@ -10,7 +10,7 @@ private:
 	void lockUnlock();
 	void setDescription();
 public:
-	GoodScreen();
+	GoodScreen(WarehouseHandler * wh, UserHandler * uh);
 	~GoodScreen();
 	std::string displayOptions() override;
 	void runOption(int option, int * interface) override;

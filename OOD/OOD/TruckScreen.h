@@ -10,7 +10,7 @@ private:
 	void pickUp();
 	void putDown();
 public:
-	TruckScreen();
+	TruckScreen(WarehouseHandler * wh, UserHandler * uh);
 	~TruckScreen();
 	std::string displayOptions() override;
 	void runOption(int option, int * interface) override;

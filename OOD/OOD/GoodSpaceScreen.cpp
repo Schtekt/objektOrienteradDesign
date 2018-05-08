@@ -11,8 +11,10 @@ void GoodSpaceScreen::setTemperature()
 
 }
 
-GoodSpaceScreen::GoodSpaceScreen(): Interface(3)
+GoodSpaceScreen::GoodSpaceScreen(WarehouseHandler * wh, UserHandler * uh): Interface(3)
 {
+	this->wh = wh;
+	this->uh = uh;
 }
 
 GoodSpaceScreen::~GoodSpaceScreen()
