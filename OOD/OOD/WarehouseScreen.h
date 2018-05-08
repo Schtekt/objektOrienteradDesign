@@ -9,7 +9,7 @@ private:
 	bool trackTrucks();
 	void addGood();
 public:
-	WarehouseScreen();
+	WarehouseScreen(WarehouseHandler * wh, UserHandler * uh);
 	~WarehouseScreen();
 	std::string displayOptions() override;
 	void runOption(int option, int * interface) override;

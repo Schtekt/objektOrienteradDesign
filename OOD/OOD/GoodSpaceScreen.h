@@ -7,7 +7,7 @@ private:
 	void selectGood();
 	void setTemperature();
 public:
-	GoodSpaceScreen();
+	GoodSpaceScreen(WarehouseHandler * wh, UserHandler * uh);
 	~GoodSpaceScreen();
 	std::string displayOptions() override;
 	void runOption(int option, int * interface) override;

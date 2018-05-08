@@ -22,12 +22,16 @@ void WorldScreen::runOption(int option, int *)
 	}
 }
 
-WorldScreen::WorldScreen():Interface(3)
+WorldScreen::WorldScreen(WarehouseHandler * wh, UserHandler * uh):Interface(3)
 {
+	this->wh = wh;
+	this->uh = uh;
 }
 
 WorldScreen::~WorldScreen()
 {
+	delete wh;
+	delete uh;
 }
 
 void WorldScreen::addWarehouse()

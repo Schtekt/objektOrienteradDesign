@@ -41,8 +41,10 @@ void TruckScreen::putDown()
 	}
 }
 
-TruckScreen::TruckScreen(): Interface(3)
+TruckScreen::TruckScreen(WarehouseHandler * wh, UserHandler * uh): Interface(3)
 {
+	this->wh = wh;
+	this->uh = uh;
 }
 
 TruckScreen::~TruckScreen()

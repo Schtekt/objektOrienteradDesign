@@ -1,7 +1,9 @@
 #include "WarehouseScreen.h"
 
-WarehouseScreen::WarehouseScreen(): Interface(4)
+WarehouseScreen::WarehouseScreen(WarehouseHandler * wh, UserHandler * uh): Interface(4)
 {
+	this->wh = wh;
+	this->uh = uh;
 }
 
 WarehouseScreen::~WarehouseScreen()

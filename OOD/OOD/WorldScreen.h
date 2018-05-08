@@ -7,7 +7,7 @@ class WorldScreen : public Interface
 public:
 	std::string displayOptions() override;
 	void runOption(int option, int * interface) override;
-	WorldScreen();
+	WorldScreen(WarehouseHandler * wh, UserHandler * uh);
 	~WorldScreen();
 private:
 	void addWarehouse();
