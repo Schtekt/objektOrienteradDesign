@@ -16,10 +16,10 @@ Menu::~Menu()
 
 void Menu::runOptions(int options)
 {
-	IF->runOption(options, &selectedInterface);
+	iF->runOption(options, &selectedInterface);
 }
 
 void Menu::displayOptions()
 {
-	IF->displayOptions();
+	iF->displayOptions();
 }

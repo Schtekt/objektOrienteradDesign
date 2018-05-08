@@ -30,3 +30,10 @@ void Good::setDescription(std::string desc)
 {
 	description = desc;
 }
+
+bool Good::operator=(Good Obj) const
+{
+	Obj.description = this->description;
+	Obj.locked = this->locked;
+	return true;
+}
