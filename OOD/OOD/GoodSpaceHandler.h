@@ -7,7 +7,7 @@ class GoodSpaceHandler
 {
 private:
 	int selectedGoodSpace [2];
-	std::vector<std::vector<GoodSpace*>> goodSpaces;
+	std::vector<std::vector<GoodSpace>> goodSpaces;
 public:
 	GoodSpaceHandler(unsigned int size[2]);
 	~GoodSpaceHandler();

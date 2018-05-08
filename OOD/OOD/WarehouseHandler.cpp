@@ -16,7 +16,11 @@ Warehouse * WarehouseHandler::getWarehouse(int id)
 
 void WarehouseHandler::addWarehouse(std::string name)
 {
-	vectorWarehouses.push_back(Warehouse(name));
+	unsigned int size[2];
+	size[0] = 10;
+	size[1] = 10;
+
+	vectorWarehouses.push_back(Warehouse(size, name));
 }
 
 bool WarehouseHandler::selectWarehouse(int id)

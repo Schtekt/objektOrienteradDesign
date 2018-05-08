@@ -8,10 +8,10 @@ class Warehouse
 {
 private:
 	std::string name;
-	GoodSpaceHandler * gsh;
-	TruckHandler * th;
+	GoodSpaceHandler  gsh;
+	TruckHandler  th;
 public:
-	Warehouse(std::string name = "");
+	Warehouse(unsigned int size[2], std::string name = "");
 	~Warehouse();
 	GoodSpace* getGoodSpace(int id[2]);
 	GoodSpaceHandler* getGoodSpaceHandler();

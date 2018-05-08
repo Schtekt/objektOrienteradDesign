@@ -1,47 +1,40 @@
 #include "Warehouse.h"
 
-Warehouse::Warehouse(std::string name)
+Warehouse::Warehouse(unsigned int size[2], std::string name) :gsh(size), th(&gsh)
 {
-	unsigned int size[2];
-	size[0] = 10;
-	size[1] = 10;
 	this->name = name;
-	this->gsh = new GoodSpaceHandler(size);
-	this->th = new TruckHandler(gsh);
 }
 
 Warehouse::~Warehouse()
 {
-	delete this->gsh;
-	delete this->th;
 }
 
 GoodSpace * Warehouse::getGoodSpace(int id[2])
 {
 	GoodSpace *res = nullptr;
-	if (gsh->select(id) == true)
-		res = gsh->getCurrentGoodSpace();
+	if (gsh.select(id) == true)
+		res = gsh.getCurrentGoodSpace();
 
 	return res;
 }
 
 GoodSpaceHandler * Warehouse::getGoodSpaceHandler()
 {
-	return this->gsh;
+	return &this->gsh;
 }
 
 TruckHandler * Warehouse::getTruckHandler()
 {
-	return this->th;
+	return &this->th;
 }
 
 std::string Warehouse::TrackTrucks()
 {
 	std::string tmp = " ";
-	int nr = th->nrOfTrucks();
+	int nr = th.nrOfTrucks();
 	for (int i = 0; i < nr; i++)
 	{
-		Truck tmpTruck = *th->getTruck(i);
+		Truck tmpTruck = *th.getTruck(i);
 		Good * g = nullptr;
 		int pos[2];
 		tmpTruck.getPos(pos);
