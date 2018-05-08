@@ -8,12 +8,16 @@ void Interface::goBack(int * iF)
 		*iF = 0;
 		break;
 	case 2:
+		*iF = 1;
 		break;
 	case 3:
+		*iF = 1;
 		break;
 	case 4:
+		*iF = 3;
 		break;
-	case 5:
+	case 0:
+		
 		break;
 	}
 }
