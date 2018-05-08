@@ -12,5 +12,7 @@ private:
 public:
 	GoodScreen();
 	~GoodScreen();
+	std::string displayOptions() override;
+	void runOption(int option, int * interface) override;
 };
 #endif

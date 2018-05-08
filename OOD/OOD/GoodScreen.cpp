@@ -77,3 +77,28 @@ GoodScreen::GoodScreen():Interface(5)
 GoodScreen::~GoodScreen()
 {
 }
+
+std::string GoodScreen::displayOptions()
+{
+	return "1. Set maximum temperature\n 2. Set minimum temperature\n 3. Lock/Unlock good\n 4.Set a goods description\n";
+}
+
+void GoodScreen::runOption(int option, int * interface)
+{
+	switch (option)
+	{
+	case 1:
+		setMaxTemp();
+		break;
+	case 2:
+		setMinTemp();
+		break;
+	case 3:
+		lockUnlock();
+		break;
+	case 4:
+		setDescription();
+		break;
+	}
+
+}
