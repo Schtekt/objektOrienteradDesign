@@ -7,7 +7,7 @@ private:
 public:
 	void selectGood();
 	void setTemperature();
-	void remove();
+	//REMOVED: Remove() removed and moved to GoodScreen
 };
 
 #endif
