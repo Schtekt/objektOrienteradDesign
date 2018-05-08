@@ -24,5 +24,5 @@ void Menu::runOptions(int options)
 
 void Menu::displayOptions()
 {
-	iF[selectedInterface]->displayOptions();
+	std::cout << iF[selectedInterface]->displayOptions() + "\n";
 }

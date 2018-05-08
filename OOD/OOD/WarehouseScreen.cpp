@@ -81,7 +81,7 @@ void WarehouseScreen::addGood()
 
 std::string WarehouseScreen::displayOptions()
 {
-	return "1. Select a goodspace\n 2. Select a Truck\n 3. Track Trucks\n 4. Add a Good to warehouse\n";
+	return "1. Select a goodspace\n2. Select a Truck\n3. Track Trucks\n4. Add a Good to warehouse\n";
 }
 
 void WarehouseScreen::runOption(int option, int * iF)

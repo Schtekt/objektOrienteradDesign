@@ -54,9 +54,6 @@
     <ClCompile Include="WarehouseHandler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Interface.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="User.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -64,9 +61,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Menu.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="WorldScreen.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GoodScreen.cpp">
@@ -79,6 +73,12 @@
       <Filter>Source Files\Screens</Filter>
     </ClCompile>
     <ClCompile Include="WarehouseScreen.cpp">
+      <Filter>Source Files\Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="Interface.cpp">
+      <Filter>Source Files\Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldScreen.cpp">
       <Filter>Source Files\Screens</Filter>
     </ClCompile>
   </ItemGroup>

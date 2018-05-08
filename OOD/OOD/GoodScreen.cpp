@@ -82,7 +82,7 @@ GoodScreen::~GoodScreen()
 
 std::string GoodScreen::displayOptions()
 {
-	return "1. Set maximum temperature\n 2. Set minimum temperature\n 3. Lock/Unlock good\n 4.Set a goods description\n";
+	return "1. Set maximum temperature\n2. Set minimum temperature\n3. Lock/Unlock good\n4.Set a goods description\n";
 }
 
 void GoodScreen::runOption(int option, int * interface)

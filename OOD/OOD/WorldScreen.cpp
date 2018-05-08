@@ -2,7 +2,7 @@
 
 std::string WorldScreen::displayOptions()
 {
-	return "1. Add a warehouse\n 2. Select a warehouse\n 3. Remove a warehouse.";
+	return "1. Add a warehouse\n2. Select a warehouse\n3. Remove a warehouse.";
 }
 
 void WorldScreen::runOption(int option, int *)

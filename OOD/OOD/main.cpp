@@ -6,6 +6,14 @@
 int main()
 {
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
-	Menu menu();
+	Menu meny;
+	int option = 0;
+	while (true)
+	{
+		meny.displayOptions();
+		std::cin >> option;
+		meny.runOptions(option);
+	}
+	system("PAUSE");
 	return 0;
 }

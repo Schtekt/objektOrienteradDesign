@@ -23,7 +23,7 @@ GoodSpaceScreen::~GoodSpaceScreen()
 
 std::string GoodSpaceScreen::displayOptions()
 {
-	return "1. Select a good\n 2. Set the temperature of the goodSpace\n";
+	return "1. Select a good\n2. Set the temperature of the goodSpace\n";
 }
 
 void GoodSpaceScreen::runOption(int option, int * interface)
