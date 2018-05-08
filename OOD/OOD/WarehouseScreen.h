@@ -1,7 +1,7 @@
 #ifndef WAREHOUSESCREEN_H
 #define WAREHOUSESCREEN_H
 #include "Interface.h"
-class WareHouseScreen: public Interface 
+class WarehouseScreen: public Interface 
 {
 private:
 	bool selectGoodSpace();
@@ -9,8 +9,8 @@ private:
 	bool trackTrucks();
 	void addGood();
 public:
-	WareHouseScreen();
-
+	WarehouseScreen();
+	~WarehouseScreen();
 	std::string displayOptions() override;
 	void runOption(int option, int * interface) override;
 };

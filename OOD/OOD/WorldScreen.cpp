@@ -22,6 +22,14 @@ void WorldScreen::runOption(int option, int *)
 	}
 }
 
+WorldScreen::WorldScreen():Interface(3)
+{
+}
+
+WorldScreen::~WorldScreen()
+{
+}
+
 void WorldScreen::addWarehouse()
 {
 	std::string name;

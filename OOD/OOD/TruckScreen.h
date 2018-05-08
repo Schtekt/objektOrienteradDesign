@@ -10,6 +10,8 @@ private:
 	void pickUp();
 	void putDown();
 public:
+	TruckScreen();
+	~TruckScreen();
 	std::string displayOptions() override;
 	void runOption(int option, int * interface) override;
 };

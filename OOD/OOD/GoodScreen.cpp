@@ -69,3 +69,11 @@ void GoodScreen::setDescription()
 
 	wh->getCurrentWarehouse()->getGoodSpaceHandler()->getCurrentGoodSpace()->getCurrentGood()->setDescription(desc);
 }
+
+GoodScreen::GoodScreen():Interface(5)
+{
+}
+
+GoodScreen::~GoodScreen()
+{
+}

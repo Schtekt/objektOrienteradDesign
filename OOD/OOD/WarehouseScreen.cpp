@@ -1,10 +1,14 @@
 #include "WarehouseScreen.h"
 
-WareHouseScreen::WareHouseScreen(): Interface(4)
+WarehouseScreen::WarehouseScreen(): Interface(4)
 {
 }
 
-bool WareHouseScreen::selectGoodSpace()
+WarehouseScreen::~WarehouseScreen()
+{
+}
+
+bool WarehouseScreen::selectGoodSpace()
 {
 	bool res = false;
 	try
@@ -26,7 +30,7 @@ bool WareHouseScreen::selectGoodSpace()
 	return res;
 }
 
-bool WareHouseScreen::selectTruck()
+bool WarehouseScreen::selectTruck()
 {
 	bool res = false;
 	try
@@ -53,7 +57,7 @@ bool WareHouseScreen::selectTruck()
 	return res;
 }
 
-bool WareHouseScreen::trackTrucks()
+bool WarehouseScreen::trackTrucks()
 {
 	std::string tmp;
 	tmp = wh->getCurrentWarehouse()->TrackTrucks();
@@ -61,7 +65,7 @@ bool WareHouseScreen::trackTrucks()
 	return true;
 }
 
-void WareHouseScreen::addGood()
+void WarehouseScreen::addGood()
 {
 	std::string descTmp;
 	std::cout << "Please enter a description for this good!";
@@ -73,12 +77,12 @@ void WareHouseScreen::addGood()
 	wh->getCurrentWarehouse()->getGoodSpace(pos)->addGood(g);
 }
 
-std::string WareHouseScreen::displayOptions()
+std::string WarehouseScreen::displayOptions()
 {
 	return "1. Select a goodspace\n 2. Select a Truck\n 3. Track Trucks\n 4. Add a Good to warehouse\n";
 }
 
-void WareHouseScreen::runOption(int option, int * iF)
+void WarehouseScreen::runOption(int option, int * iF)
 {
 	switch (option)
 	{

@@ -41,6 +41,15 @@ void TruckScreen::putDown()
 	}
 }
 
+TruckScreen::TruckScreen(): Interface(3)
+{
+}
+
+TruckScreen::~TruckScreen()
+{
+	//Nothing
+}
+
 std::string TruckScreen::displayOptions()
 {
 	return "1. Move truck\n";

@@ -8,6 +8,8 @@ public:
 	std::string displayOptions() override;
 	void runOption(int option, int * interface) override;
 private:
+	WorldScreen();
+	~WorldScreen();
 	void addWarehouse();
 	// CHANGE! the ID will be asked for inside the function instead.
 	void selectWarehouse();

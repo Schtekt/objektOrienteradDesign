@@ -1,13 +1,17 @@
 #ifndef MENU_H
 #define MENU_H
 #include <string>
-#include "Interface.h"
+#include "WorldScreen.h"
+#include "WarehouseScreen.h"
+#include "GoodSpaceScreen.h"
+#include "TruckScreen.h"
+#include "GoodScreen.h"
 
 class Menu
 {
 private:
 	int selectedInterface;
-	Interface *IF;
+	std::vector<Interface *> iF;
 public:
 	Menu();
 	~Menu();
