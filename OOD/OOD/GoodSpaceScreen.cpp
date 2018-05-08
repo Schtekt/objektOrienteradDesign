@@ -16,4 +16,6 @@ void GoodSpaceScreen::selectGood()
 	int id = -1;
 	std::cout << "Enter id for the good you want to select";
 	std::cin >> id;
+
+	wh->getCurrentWarehouse()->getGoodSpaceHandler()->getCurrentGoodSpace()->getGood(id);
 }
