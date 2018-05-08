@@ -4,9 +4,13 @@
 class GoodSpaceScreen : public Interface
 {
 private:
-public:
 	void selectGood();
 	void setTemperature();
+public:
+	GoodSpaceScreen();
+	~GoodSpaceScreen();
+	std::string displayOptions() override;
+	void runOption(int option, int * interface) override;
 	//REMOVED: Remove() removed and moved to GoodScreen
 };
 

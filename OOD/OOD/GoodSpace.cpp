@@ -52,3 +52,29 @@ void GoodSpace::getContent(std::vector<std::string>& arr)
 		arr.push_back("Index: " + std::to_string(i) + " Description: " + goods[i].getDescription());
 	}
 }
+
+Good * GoodSpace::getCurrentGood()
+{
+	return &goods[selectedGood];
+}
+
+bool GoodSpace::selectGood(int id)
+{
+	bool res = false;
+	if (id >= 0 && id < goods.size())
+	{
+		selectedGood = id;
+		res = true;
+	}
+	return res;
+}
+
+int GoodSpace::getSelectedPos()
+{
+	return selectedGood;
+}
+
+int GoodSpace::getSize()
+{
+	return goods.size();
+}

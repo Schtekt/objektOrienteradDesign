@@ -11,6 +11,32 @@ void GoodSpaceScreen::setTemperature()
 
 }
 
+GoodSpaceScreen::GoodSpaceScreen(): Interface(3)
+{
+}
+
+GoodSpaceScreen::~GoodSpaceScreen()
+{
+}
+
+std::string GoodSpaceScreen::displayOptions()
+{
+	return "1. Select a good\n 2. Set the temperature of the goodSpace\n";
+}
+
+void GoodSpaceScreen::runOption(int option, int *)
+{
+	switch (option)
+	{
+	case 1:
+		selectGood();
+		break;
+	case 2:
+		setTemperature();
+		break;
+	}
+}
+
 void GoodSpaceScreen::selectGood()
 {
 	int id = -1;

@@ -6,6 +6,8 @@ class GoodSpace
 {
 private:
 	float tempC;
+	// CHANGE! added variable selectedGood
+	int selectedGood;
 	std::vector<Good> goods;
 public:
 	GoodSpace(float tempC);
@@ -20,5 +22,10 @@ public:
 	void setTemp(float temp);
 
 	void getContent(std::vector<std::string> &arr);
+	// CHANGE! added function getCurrentGood
+	Good * getCurrentGood();
+	bool selectGood(int id);
+	int getSelectedPos();
+	int getSize();
 };
 #endif
