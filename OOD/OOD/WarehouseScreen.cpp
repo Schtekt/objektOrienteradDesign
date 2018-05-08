@@ -74,7 +74,7 @@ void WarehouseScreen::addGood()
 	pos[0] = 0;
 	pos[1] = 0;
 	Good * g = new Good(descTmp);
-	wh->getCurrentWarehouse()->getGoodSpace(pos)->addGood(g);
+	wh->getCurrentWarehouse()->getGoodSpace(pos)->addGood(*g);
 }
 
 std::string WarehouseScreen::displayOptions()
