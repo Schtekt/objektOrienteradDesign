@@ -10,5 +10,7 @@ private:
 	void lockUnlock();
 	void setDescription();
 public:
+	GoodScreen();
+	~GoodScreen();
 };
 #endif
