@@ -16,7 +16,7 @@ bool WarehouseScreen::selectGoodSpace()
 	try
 	{
 		int pos[2];
-		std::cout << "Please enter a position\n x: ";
+		std::cout << "Please enter a position\nx: ";
 		std::cin >> pos[0];
 		std::cout << "y: ";
 		std::cin >> pos[1];

@@ -32,6 +32,7 @@ void GoodSpaceScreen::runOption(int option, int * interface)
 	{
 	case 1:
 		selectGood();
+		*interface = 4;
 		break;
 	case 2:
 		setTemperature();
@@ -42,7 +43,7 @@ void GoodSpaceScreen::runOption(int option, int * interface)
 void GoodSpaceScreen::selectGood()
 {
 	int id = -1;
-	std::cout << "Enter id for the good you want to select";
+	std::cout << "Enter id for the good you want to select:\n";
 	std::cin >> id;
 
 	wh->getCurrentWarehouse()->getGoodSpaceHandler()->getCurrentGoodSpace()->getGood(id);

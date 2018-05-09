@@ -3,16 +3,33 @@
 void TruckScreen::pickUp()
 {
 	Truck * truck = wh->getCurrentWarehouse()->getTruckHandler()->getSelectedTruck();
-	if (truck->setGood(*wh->getCurrentWarehouse()->getGoodSpaceHandler()->getCurrentGoodSpace()->getCurrentGood()))
+	int pos[2];
+	pos[0] = 0;
+	pos[1] = 0;
+	wh->getCurrentWarehouse()->getGoodSpaceHandler()->getSelectedPos(pos);
+	if (pos[0] == -1 || pos[1] == -1)
 	{
-		int pos[2];
-		wh->getCurrentWarehouse()->getGoodSpaceHandler()->getSelectedPos(pos);
-		truck->setPos(pos);
-		wh->getCurrentWarehouse()->getGoodSpaceHandler()->getCurrentGoodSpace()->removeGood(wh->getCurrentWarehouse()->getGoodSpaceHandler()->getCurrentGoodSpace()->getSelectedPos());
+		std::cout << "No good space have been selected, plese enter coordinates\nx: ";
+		std::cin >> pos[0];
+		std::cout << "y: ";
+		std::cin >> pos[1];
+	}
+	if (wh->getCurrentWarehouse()->getGoodSpace(pos)->getSize() > 0)
+	{
+		if (truck->setGood(*wh->getCurrentWarehouse()->getGoodSpaceHandler()->getGoodSpace(pos)->getCurrentGood()))
+		{
+			wh->getCurrentWarehouse()->getGoodSpaceHandler()->getSelectedPos(pos);
+			truck->setPos(pos);
+			wh->getCurrentWarehouse()->getGoodSpaceHandler()->getCurrentGoodSpace()->removeGood(wh->getCurrentWarehouse()->getGoodSpaceHandler()->getCurrentGoodSpace()->getSelectedPos());
+		}
+		else
+		{
+			std::cout << "Error, the truck already carries a good, plese put it down before putting another one in its place.\n";
+		}
 	}
 	else
 	{
-		std::cout << "Error, the truck already carries a good, plese put it down before putting another one in its place.";
+		std::cout << "Error, there is no good in this space (position :" + std::to_string(pos[0]) + ", " + std::to_string(pos[1]) + "), please put a good before trying to pick one up!\n";
 	}
 }
 
@@ -54,7 +71,7 @@ TruckScreen::~TruckScreen()
 
 std::string TruckScreen::displayOptions()
 {
-	return "1. Move truck\n";
+	return "1. Pick up Good\n2. Put down Good";
 }
 
 void TruckScreen::runOption(int option, int *)

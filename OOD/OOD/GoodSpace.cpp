@@ -3,6 +3,7 @@
 GoodSpace::GoodSpace(float tempC)
 {
 	this->tempC = tempC;
+	selectedGood = -1;
 }
 
 GoodSpace::~GoodSpace()
@@ -18,6 +19,7 @@ Good * GoodSpace::getGood(int index)
 void GoodSpace::addGood(Good newGood)
 {
 	goods.push_back(newGood);
+	selectedGood = goods.size() - 1;
 }
 
 bool GoodSpace::editGood(int index, bool locked)

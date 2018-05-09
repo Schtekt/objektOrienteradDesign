@@ -5,7 +5,7 @@ bool GoodScreen::setMaxTemp()
 	bool res = true;
 	float maxTempC;
 
-	std::cout << "Please enter a temperature (in celcius) that you would like to set this good's max temperature to: ";
+	std::cout << "Please enter a temperature (in celcius) that you would like to set this good's max temperature to:\n";
 	std::cin >> maxTempC;
 
 	if (maxTempC < ((BigBox*)wh->getCurrentWarehouse()->getGoodSpaceHandler()->getCurrentGoodSpace()->getCurrentGood())->getTempMin())
@@ -28,7 +28,7 @@ bool GoodScreen::setMinTemp()
 	bool res = true;
 	float minTempC;
 
-	std::cout << "Please enter a temperature (in celcius) that you would like to set this good's min temperature to: ";
+	std::cout << "Please enter a temperature (in celcius) that you would like to set this good's min temperature to:\n";
 	std::cin >> minTempC;
 
 	if (minTempC > ((BigBox*)wh->getCurrentWarehouse()->getGoodSpaceHandler()->getCurrentGoodSpace()->getCurrentGood())->getTempMin())
@@ -64,7 +64,7 @@ void GoodScreen::lockUnlock()
 void GoodScreen::setDescription()
 {
 	std::string desc;
-	std::cout << "Please enter the new description: ";
+	std::cout << "Please enter the new description:\n";
 	std::cin >> desc;
 
 	wh->getCurrentWarehouse()->getGoodSpaceHandler()->getCurrentGoodSpace()->getCurrentGood()->setDescription(desc);
@@ -82,7 +82,7 @@ GoodScreen::~GoodScreen()
 
 std::string GoodScreen::displayOptions()
 {
-	return "1. Set maximum temperature\n2. Set minimum temperature\n3. Lock/Unlock good\n4.Set a goods description\n";
+	return "1. Set maximum temperature\n2. Set minimum temperature\n3. Lock/Unlock good\n4. Set good description\n";
 }
 
 void GoodScreen::runOption(int option, int * interface)
