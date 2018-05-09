@@ -3,8 +3,10 @@
 Menu::Menu()
 {
 	this->selectedInterface = 0; //Worldscreen should be assigned to slot 0
-	WarehouseHandler * wh = new WarehouseHandler();
-	UserHandler * uh = new UserHandler();
+	// will be deleted in WorldScreen
+	//WarehouseHandler * wh = new WarehouseHandler();
+	uh = new UserHandler();
+	wh = new WarehouseHandler();
 
 	iF.push_back(new WorldScreen(wh,uh));
 	iF.push_back(new WarehouseScreen(wh, uh));
@@ -15,11 +17,24 @@ Menu::Menu()
 
 Menu::~Menu()
 {
+	for (int i = 0; i < 5; i++)
+	{
+		delete iF[i];
+	}
+	delete wh;
+	delete uh;
 }
 
-void Menu::runOptions(int options)
+bool Menu::runOptions(int options)
 {
+	bool res = true;
 	iF[selectedInterface]->runOption(options, &selectedInterface);
+
+	if (selectedInterface == -1)
+	{
+		res = false;
+	}
+	return res;
 }
 
 void Menu::displayOptions()

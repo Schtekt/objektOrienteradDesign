@@ -14,6 +14,7 @@ private:
 	// CHANGE! the ID will be asked for inside the function instead.
 	void selectWarehouse();
 	void removeWarehouse();
+	void goBack(int * iF);
 };
 
 #endif

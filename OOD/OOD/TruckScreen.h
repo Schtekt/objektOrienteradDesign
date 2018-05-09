@@ -9,6 +9,7 @@ private:
 	// CHANGE! movegood is replaced by two functions, pick up and put down.
 	void pickUp();
 	void putDown();
+	void goBack(int * iF);
 public:
 	TruckScreen(WarehouseHandler * wh, UserHandler * uh);
 	~TruckScreen();

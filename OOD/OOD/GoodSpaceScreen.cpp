@@ -11,6 +11,11 @@ void GoodSpaceScreen::setTemperature()
 
 }
 
+void GoodSpaceScreen::goBack(int * iF)
+{
+	*iF = 1;
+}
+
 GoodSpaceScreen::GoodSpaceScreen(WarehouseHandler * wh, UserHandler * uh): Interface(3)
 {
 	this->wh = wh;
@@ -23,13 +28,16 @@ GoodSpaceScreen::~GoodSpaceScreen()
 
 std::string GoodSpaceScreen::displayOptions()
 {
-	return "1. Select a good\n2. Set the temperature of the goodSpace\n";
+	return "1. Select a good\n2. Set the temperature of the goodSpace\n0. go back.\n";
 }
 
 void GoodSpaceScreen::runOption(int option, int * interface)
 {
 	switch (option)
 	{
+	case 0:
+		goBack(interface);
+		break;
 	case 1:
 		selectGood();
 		*interface = 4;

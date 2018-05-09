@@ -89,15 +89,23 @@ void WarehouseScreen::addTruck()
 	std::cout << "A truck has been added at the position 0,0\n";
 }
 
+void WarehouseScreen::goBack(int * iF)
+{
+	*iF = 0;
+}
+
 std::string WarehouseScreen::displayOptions()
 {
-	return "1. Select a goodspace\n2. Select a Truck\n3. Track Trucks\n4. Add a Good to warehouse\n5. Add a Truck to warehouse";
+	return "1. Select a goodspace\n2. Select a Truck\n3. Track Trucks\n4. Add a Good to warehouse\n5. Add a Truck to warehouse\n0. Go back.\n";
 }
 
 void WarehouseScreen::runOption(int option, int * iF)
 {
 	switch (option)
 	{
+	case 0:
+		goBack(iF);
+		break;
 	case 1:
 		selectGoodSpace();
 		iF[0] = 3;

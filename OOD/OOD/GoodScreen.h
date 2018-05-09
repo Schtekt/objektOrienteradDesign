@@ -9,6 +9,7 @@ private:
 	bool setMinTemp();
 	void lockUnlock();
 	void setDescription();
+	void goBack(int * iF);
 public:
 	GoodScreen(WarehouseHandler * wh, UserHandler * uh);
 	~GoodScreen();

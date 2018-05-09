@@ -70,6 +70,11 @@ void GoodScreen::setDescription()
 	wh->getCurrentWarehouse()->getGoodSpaceHandler()->getCurrentGoodSpace()->getCurrentGood()->setDescription(desc);
 }
 
+void GoodScreen::goBack(int * iF)
+{
+	*iF = 3;
+}
+
 GoodScreen::GoodScreen(WarehouseHandler * wh, UserHandler * uh):Interface(5)
 {
 	this->wh = wh;
@@ -82,13 +87,16 @@ GoodScreen::~GoodScreen()
 
 std::string GoodScreen::displayOptions()
 {
-	return "1. Set maximum temperature\n2. Set minimum temperature\n3. Lock/Unlock good\n4. Set good description\n";
+	return "1. Set maximum temperature\n2. Set minimum temperature\n3. Lock/Unlock good\n4. Set good description\n0. Go back.\n";
 }
 
 void GoodScreen::runOption(int option, int * interface)
 {
 	switch (option)
 	{
+	case 0:
+		goBack(interface);
+		break;
 	case 1:
 		setMaxTemp();
 		break;

@@ -6,6 +6,7 @@ class GoodSpaceScreen : public Interface
 private:
 	void selectGood();
 	void setTemperature();
+	void goBack(int * iF);
 public:
 	GoodSpaceScreen(WarehouseHandler * wh, UserHandler * uh);
 	~GoodSpaceScreen();

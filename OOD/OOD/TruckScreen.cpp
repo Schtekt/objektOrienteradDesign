@@ -58,6 +58,11 @@ void TruckScreen::putDown()
 	}
 }
 
+void TruckScreen::goBack(int * iF)
+{
+	*iF = 1;
+}
+
 TruckScreen::TruckScreen(WarehouseHandler * wh, UserHandler * uh): Interface(3)
 {
 	this->wh = wh;
@@ -66,18 +71,20 @@ TruckScreen::TruckScreen(WarehouseHandler * wh, UserHandler * uh): Interface(3)
 
 TruckScreen::~TruckScreen()
 {
-	//Nothing
 }
 
 std::string TruckScreen::displayOptions()
 {
-	return "1. Pick up Good\n2. Put down Good";
+	return "1. Pick up Good.\n2. Put down Good.\n0. Go back.\n";
 }
 
-void TruckScreen::runOption(int option, int *)
+void TruckScreen::runOption(int option, int * interface)
 {
 	switch (option)
 	{
+	case 0:
+		goBack(interface);
+		break;
 	case 1:
 		pickUp();
 		break;

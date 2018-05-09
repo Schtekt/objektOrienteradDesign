@@ -10,6 +10,7 @@ private:
 	void addGood();
 	//CHANGE! added a function for adding trucks.
 	void addTruck();
+	void goBack(int * iF);
 public:
 	WarehouseScreen(WarehouseHandler * wh, UserHandler * uh);
 	~WarehouseScreen();

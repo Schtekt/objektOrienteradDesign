@@ -12,10 +12,14 @@ class Menu
 private:
 	int selectedInterface;
 	std::vector<Interface *> iF;
+	//CHANGE! because of memory issues, handlers are also put into menu...
+	WarehouseHandler * wh;
+	UserHandler * uh;
 public:
 	Menu();
 	~Menu();
-	void runOptions(int options);
+	//CHANGE! runoption is made into a bool to check if the program should exit.
+	bool runOptions(int options);
 	void displayOptions(); //CHANGED: Removed the string options as parameter
 
 };

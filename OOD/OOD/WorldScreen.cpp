@@ -2,13 +2,16 @@
 
 std::string WorldScreen::displayOptions()
 {
-	return "1. Add a warehouse\n2. Select a warehouse\n3. Remove a warehouse.";
+	return "1. Add a warehouse\n2. Select a warehouse\n3. Remove a warehouse.\n0. Exit.\n";
 }
 
 void WorldScreen::runOption(int option, int * iF)
 {
 	switch (option)
 	{
+	case 0:
+		goBack(iF);
+		break;
 	case 1:
 		addWarehouse();
 		break;
@@ -30,8 +33,6 @@ WorldScreen::WorldScreen(WarehouseHandler * wh, UserHandler * uh):Interface(3)
 
 WorldScreen::~WorldScreen()
 {
-	delete wh;
-	delete uh;
 }
 
 void WorldScreen::addWarehouse()
@@ -67,4 +68,9 @@ void WorldScreen::removeWarehouse()
 	wh->deleteWarehouse(id);
 
 	std::cout << "Warehouse \"" + name + "\" is now removed.\n";
+}
+
+void WorldScreen::goBack(int * iF)
+{
+	*iF = -1;
 }
