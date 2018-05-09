@@ -1,6 +1,6 @@
 #include "Interface.h"
 
-void Interface::goBack(int * iF)
+/*void Interface::goBack(int * iF)
 {
 	switch (*iF)
 	{
@@ -20,7 +20,7 @@ void Interface::goBack(int * iF)
 		
 		break;
 	}
-}
+}*/
 
 Interface::Interface(int nrOfOptions)
 {
