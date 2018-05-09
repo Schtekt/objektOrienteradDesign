@@ -32,8 +32,16 @@ TruckHandler * Warehouse::getTruckHandler()
 
 std::string Warehouse::TrackTrucks()
 {
-	std::string tmp = " ";
+	std::string tmp = "";
 	int nr = th.nrOfTrucks();
+	if (nr > 0)
+	{
+		tmp += "In this warehouse we got the following truck(s):\n";
+	}
+	else
+	{
+		tmp += "This warehouse has no trucks!\n";
+	}
 	for (int i = 0; i < nr; i++)
 	{
 		Truck tmpTruck = *th.getTruck(i);
@@ -42,9 +50,9 @@ std::string Warehouse::TrackTrucks()
 		tmpTruck.getPos(pos);
 
 		if (tmpTruck.getGood(g) == true)
-			tmp += std::to_string(i) + ", " + "X:" + std::to_string(pos[0]) + " " + "Y:" + std::to_string(pos[1]) + "Good description: " + g->getDescription() + "\n";
+			tmp += "id: " + std::to_string(i) + ", " + "X:" + std::to_string(pos[0]) + " " + "Y:" + std::to_string(pos[1]) + "Good description: " + g->getDescription() + "\n";
 		else
-			tmp += std::to_string(i) + ", " + "X:" + std::to_string(pos[0]) + " " + "Y:" + std::to_string(pos[1]) + "\n";
+			tmp += "id: " + std::to_string(i) + ", " + "X:" + std::to_string(pos[0]) + " " + "Y:" + std::to_string(pos[1]) + "\n";
 
 	}
 

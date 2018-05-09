@@ -26,7 +26,7 @@ bool WarehouseScreen::selectGoodSpace()
 	}
 	catch (std::string e)
 	{
-		std::cout << "Error! someting went wrong!";
+		std::cout << "Error! someting went wrong!\n";
 	}
 
 	return res;
@@ -54,7 +54,7 @@ bool WarehouseScreen::selectTruck()
 	}
 	catch (std::string e)
 	{
-		std::cout << "Something went wrong!";
+		std::cout << "Something went wrong!\n";
 	}
 	return res;
 }
@@ -77,14 +77,14 @@ void WarehouseScreen::addGood()
 	pos[1] = 0;
 	Good * g = new Good(descTmp);
 	wh->getCurrentWarehouse()->getGoodSpace(pos)->addGood(*g);
-	std::cout << "The good has been added to the position 0,0";
+	std::cout << "The good has been added to the position 0,0\n";
 }
 
 void WarehouseScreen::addTruck()
 {
 	int pos[2];
 	pos[0] = 0;
-	pos[1] = 1;
+	pos[1] = 0;
 	wh->getCurrentWarehouse()->getTruckHandler()->addTruck(pos);
 	std::cout << "A truck has been added at the position 0,0\n";
 }
