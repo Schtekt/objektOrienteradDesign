@@ -8,7 +8,7 @@ TruckHandler::TruckHandler(GoodSpaceHandler * gsh)
 
 TruckHandler::~TruckHandler()
 {
-	//Nothing
+	delete gsh;
 }
 
 Truck * TruckHandler::getTruck(int id)
@@ -25,6 +25,8 @@ bool TruckHandler::addTruck(int pos[2])
 {
 	bool res = false;
 	int size[2];
+	size[0] = 0;
+	size[1] = 0;
 	gsh->getSize(size);
 	if (pos[0] >= 0 && pos[1] >= 0 && pos[0] < size[0] && pos[1] < size[1])
 	{
@@ -100,4 +102,9 @@ bool TruckHandler::selectTruck(int id)
 Truck * TruckHandler::getSelectedTruck()
 {
 	return &trucks[selectedTruck];
+}
+
+void TruckHandler::setGSH(GoodSpaceHandler * gsh)
+{
+	this->gsh = gsh;
 }

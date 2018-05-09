@@ -3,6 +3,8 @@
 Warehouse::Warehouse(unsigned int size[2], std::string name) :gsh(size), th(&gsh)
 {
 	this->name = name;
+	GoodSpaceHandler * gshP = new GoodSpaceHandler(gsh);
+	th.setGSH(gshP);
 }
 
 Warehouse::~Warehouse()

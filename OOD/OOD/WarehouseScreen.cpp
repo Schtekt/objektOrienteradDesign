@@ -16,7 +16,7 @@ bool WarehouseScreen::selectGoodSpace()
 	try
 	{
 		int pos[2];
-		std::cout << "Please enter an position\n x: ";
+		std::cout << "Please enter a position\n x: ";
 		std::cin >> pos[0];
 		std::cout << "y: ";
 		std::cin >> pos[1];
@@ -70,18 +70,28 @@ bool WarehouseScreen::trackTrucks()
 void WarehouseScreen::addGood()
 {
 	std::string descTmp;
-	std::cout << "Please enter a description for this good!";
+	std::cout << "Please enter a description for this good: ";
 	std::cin >> descTmp;
 	int pos[2];
 	pos[0] = 0;
 	pos[1] = 0;
 	Good * g = new Good(descTmp);
 	wh->getCurrentWarehouse()->getGoodSpace(pos)->addGood(*g);
+	std::cout << "The good has been added to the position 0,0";
+}
+
+void WarehouseScreen::addTruck()
+{
+	int pos[2];
+	pos[0] = 0;
+	pos[1] = 1;
+	wh->getCurrentWarehouse()->getTruckHandler()->addTruck(pos);
+	std::cout << "A truck has been added at the position 0,0\n";
 }
 
 std::string WarehouseScreen::displayOptions()
 {
-	return "1. Select a goodspace\n2. Select a Truck\n3. Track Trucks\n4. Add a Good to warehouse\n";
+	return "1. Select a goodspace\n2. Select a Truck\n3. Track Trucks\n4. Add a Good to warehouse\n5. Add a Truck to warehouse";
 }
 
 void WarehouseScreen::runOption(int option, int * iF)
@@ -101,6 +111,9 @@ void WarehouseScreen::runOption(int option, int * iF)
 		break;
 	case 4:
 		addGood();
+		break;
+	case 5:
+		addTruck();
 		break;
 	}
 }

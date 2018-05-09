@@ -11,7 +11,7 @@ private:
 	int selectedTruck;
 	std::vector<Truck> trucks;
 public:
-	TruckHandler(GoodSpaceHandler * gsh);
+	TruckHandler(GoodSpaceHandler * gsh = nullptr);
 	~TruckHandler();
 	//CHANGE! added a function "getTruck".
 	Truck * getTruck(int id);
@@ -26,5 +26,7 @@ public:
 	bool selectTruck(int id);
 	//CHANGE! Added function getSelectedTruck
 	Truck * getSelectedTruck();
+	//CHANGE! Added function to set gsh
+	void setGSH(GoodSpaceHandler * gsh);
 };
 #endif

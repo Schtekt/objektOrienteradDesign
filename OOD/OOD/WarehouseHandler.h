@@ -7,7 +7,7 @@ class WarehouseHandler
 {
 private:
 	int selectedWarehouse;
-	std::vector<Warehouse> vectorWarehouses;
+	std::vector<Warehouse*> vectorWarehouses;
 public:
 	WarehouseHandler();
 	~WarehouseHandler();

@@ -7,11 +7,15 @@ WarehouseHandler::WarehouseHandler()
 
 WarehouseHandler::~WarehouseHandler()
 {
+	for (int i = 0; i < vectorWarehouses.size(); i++)
+	{
+		delete vectorWarehouses[i];
+	}
 }
 
 Warehouse * WarehouseHandler::getWarehouse(int id)
 {
-	return &vectorWarehouses[id];
+	return vectorWarehouses[id];
 }
 
 void WarehouseHandler::addWarehouse(std::string name)
@@ -19,8 +23,8 @@ void WarehouseHandler::addWarehouse(std::string name)
 	unsigned int size[2];
 	size[0] = 10;
 	size[1] = 10;
-
-	vectorWarehouses.push_back(Warehouse(size, name));
+	Warehouse * w = new Warehouse(size, name);
+	vectorWarehouses.push_back(w);
 }
 
 bool WarehouseHandler::selectWarehouse(int id)
@@ -45,6 +49,7 @@ bool WarehouseHandler::deleteWarehouse(int id)
 		else if (id < selectedWarehouse)
 			selectedWarehouse--;
 
+		delete vectorWarehouses[id];
 		vectorWarehouses.erase(vectorWarehouses.begin() + id);
 
 		res = true;
@@ -56,10 +61,10 @@ bool WarehouseHandler::deleteWarehouse(int id)
 
 Warehouse * WarehouseHandler::getCurrentWarehouse()
 {
-	return &vectorWarehouses[selectedWarehouse];
+	return vectorWarehouses[selectedWarehouse];
 }
 
 int WarehouseHandler::nrOfWarehouses()
 {
-	return vectorWarehouses.size();
+	return (int)vectorWarehouses.size();
 }

@@ -8,6 +8,8 @@ private:
 	bool selectTruck();
 	bool trackTrucks();
 	void addGood();
+	//CHANGE! added a function for adding trucks.
+	void addTruck();
 public:
 	WarehouseScreen(WarehouseHandler * wh, UserHandler * uh);
 	~WarehouseScreen();

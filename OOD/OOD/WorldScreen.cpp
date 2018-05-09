@@ -5,7 +5,7 @@ std::string WorldScreen::displayOptions()
 	return "1. Add a warehouse\n2. Select a warehouse\n3. Remove a warehouse.";
 }
 
-void WorldScreen::runOption(int option, int *)
+void WorldScreen::runOption(int option, int * iF)
 {
 	switch (option)
 	{
@@ -14,7 +14,7 @@ void WorldScreen::runOption(int option, int *)
 		break;
 	case 2:
 		selectWarehouse();
-		// sätt ut warehouseScreenen här...
+		*iF = 1;
 		break;
 	case 3:
 		removeWarehouse();
@@ -42,18 +42,18 @@ void WorldScreen::addWarehouse()
 
 	wh->addWarehouse(name);
 
-	std::cout << "Warehouse \"" + name + "\" added";
+	std::cout << "Warehouse \"" + name + "\" added\n";
 }
 
 void WorldScreen::selectWarehouse()
 {
 	int id;
-	std::cout << "Please enter an ID for the warehouse you wish to select (max is " + std::to_string(wh->nrOfWarehouses() - 1); +"): ";
+	std::cout << "Please enter an ID for the warehouse you wish to select (max is " + std::to_string(wh->nrOfWarehouses() - 1) + "): ";
 	std::cin >> id;
 
 	wh->selectWarehouse(id);
 
-	std::cout << "Warehouse \"" + wh->getWarehouse(id)->getName() + " \" is now selected";
+	std::cout << "Warehouse \"" + wh->getWarehouse(id)->getName() + " \" is now selected\n";
 }
 
 void WorldScreen::removeWarehouse()
@@ -66,5 +66,5 @@ void WorldScreen::removeWarehouse()
 
 	wh->deleteWarehouse(id);
 
-	std::cout << "Warehouse \"" + name + "\" is now removed.";
+	std::cout << "Warehouse \"" + name + "\" is now removed.\n";
 }
