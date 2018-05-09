@@ -26,7 +26,5 @@ public:
 	bool selectTruck(int id);
 	//CHANGE! Added function getSelectedTruck
 	Truck * getSelectedTruck();
-	//CHANGE! Added function to set gsh
-	void setGSH(GoodSpaceHandler * gsh);
 };
 #endif

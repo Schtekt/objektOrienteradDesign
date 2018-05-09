@@ -8,7 +8,6 @@ TruckHandler::TruckHandler(GoodSpaceHandler * gsh)
 
 TruckHandler::~TruckHandler()
 {
-	delete gsh;
 }
 
 Truck * TruckHandler::getTruck(int id)
@@ -104,7 +103,3 @@ Truck * TruckHandler::getSelectedTruck()
 	return &trucks[selectedTruck];
 }
 
-void TruckHandler::setGSH(GoodSpaceHandler * gsh)
-{
-	this->gsh = gsh;
-}
