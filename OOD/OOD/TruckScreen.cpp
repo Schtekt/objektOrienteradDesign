@@ -35,7 +35,7 @@ void TruckScreen::pickUp()
 
 void TruckScreen::putDown()
 {
-	Good * g = nullptr;
+	Good * g = &Good("");
 	Warehouse * w = wh->getCurrentWarehouse();
 	Truck * truck = w->getTruckHandler()->getSelectedTruck();
 
@@ -55,6 +55,10 @@ void TruckScreen::putDown()
 			w->getGoodSpaceHandler()->getGoodSpace(pos)->addGood(*g);
 			truck->setCarries(false);
 		}
+	}
+	else
+	{
+		std::cout << "Error! the truck holds no good!";
 	}
 }
 

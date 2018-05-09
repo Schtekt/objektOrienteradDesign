@@ -11,6 +11,14 @@ void GoodSpaceScreen::setTemperature()
 
 }
 
+void GoodSpaceScreen::listGoods()
+{
+	std::vector<std::string> tmp;
+	wh->getCurrentWarehouse()->getGoodSpaceHandler()->getCurrentGoodSpace()->getContent(tmp);
+	for(int i = 0; i < tmp.size(); i++)
+		std::cout << tmp[i] + "\n";
+}
+
 void GoodSpaceScreen::goBack(int * iF)
 {
 	*iF = 1;
@@ -28,7 +36,7 @@ GoodSpaceScreen::~GoodSpaceScreen()
 
 std::string GoodSpaceScreen::displayOptions()
 {
-	return "1. Select a good\n2. Set the temperature of the goodSpace\n0. go back.\n";
+	return "1. Select a good\n2. Set the temperature of the goodSpace\n3. List all goods in this space.\n0. go back.\n";
 }
 
 void GoodSpaceScreen::runOption(int option, int * interface)
@@ -44,6 +52,9 @@ void GoodSpaceScreen::runOption(int option, int * interface)
 		break;
 	case 2:
 		setTemperature();
+		break;
+	case 3:
+		listGoods();
 		break;
 	}
 }

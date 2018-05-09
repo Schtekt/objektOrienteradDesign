@@ -28,7 +28,7 @@ bool Truck::getGood(Good * returnValue)
 {
 	if (carries)
 	{
-		returnValue = &good;
+		*returnValue = good;
 	}
 	return carries;
 }
@@ -44,7 +44,8 @@ bool Truck::setGood(Good good)
 	bool res = false;
 	if (carries == false)
 	{
-		this->good = good;
+		this->good.operator=(good);
+		carries = true;
 		res = true;
 	}
 	return res;

@@ -31,9 +31,14 @@ void Good::setDescription(std::string desc)
 	description = desc;
 }
 
-bool Good::operator=(Good Obj) const
+Good Good::operator=(Good Obj) 
 {
-	Obj.description = this->description;
-	Obj.locked = this->locked;
-	return true;
+	//SPAJ! satt i en timme o fattade inte vrf description eller locked ändrades...
+
+	//Obj.description = this->description;
+	//Obj.locked = this->locked;
+
+	this->description = Obj.description;
+	this->locked = Obj.locked;
+	return *this;
 }

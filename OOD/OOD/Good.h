@@ -13,6 +13,6 @@ public:
 	bool getLocked();
 	void switchLocked();
 	void setDescription(std::string desc);
-	bool operator=(Good Obj) const;
+	Good operator=(Good Obj);
 };
 #endif

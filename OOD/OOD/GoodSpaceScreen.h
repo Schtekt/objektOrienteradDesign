@@ -6,6 +6,8 @@ class GoodSpaceScreen : public Interface
 private:
 	void selectGood();
 	void setTemperature();
+	//CHANGE! Added a funtion "listGoods"
+	void listGoods();
 	void goBack(int * iF);
 public:
 	GoodSpaceScreen(WarehouseHandler * wh, UserHandler * uh);
